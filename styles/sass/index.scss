@@ -1,0 +1,63 @@
+.bc__section__presentation {
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px;
+
+    &__container {
+        display: flex;
+        width: 1400px;
+     
+
+        &__text {
+            display: flex;
+            align-items: center;
+
+            .bc__presentation__container__animation {
+                display: flex;
+                font-size: 50px;
+                font-weight: 900;
+                font-style: italic;
+            }
+
+            h1 {
+                margin-right: 20px;
+            }
+
+            h1 {
+                font-size: 50px;
+                font-weight: 900;
+                font-style: italic;
+            }
+
+            .bc__writting__bar {
+                width: 3px;
+                height: 100%;
+                margin-left: 5px;
+                background-color: #181818;
+                transform: rotateZ(10deg);
+                animation: writting-bar-animation 1s ease infinite;
+            }
+
+            .bc__presentation__container__profession {
+                display: flex;
+
+                .profession__spacer {
+                    padding: 10px;
+                }
+
+                .bc__animation__profession {
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+}
+
+/* Writting bar animation ---------------------------------------------*/
+@keyframes writting-bar-animation {
+    50% {
+        height: 30%;
+    }
+}
