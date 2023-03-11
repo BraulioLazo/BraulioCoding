@@ -10,11 +10,11 @@
 
         &__text {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
 
             .bc__presentation__container__animation {
                 display: flex;
-                flex-wrap: wrap;
                 font-size: 50px;
                 font-weight: 900;
                 font-style: italic;
@@ -32,7 +32,7 @@
 
             .bc__writting__bar {
                 width: 3px;
-                height: 100%;
+                height: 50px;
                 margin-left: 5px;
                 background-color: #181818;
                 transform: rotateZ(10deg);
@@ -41,10 +41,6 @@
 
             .bc__presentation__container__profession {
                 display: flex;
-
-                .profession__spacer {
-                    padding: 10px;
-                }
 
                 .bc__animation__profession {
                     display: none;
@@ -59,6 +55,6 @@
 /* Writting bar animation ---------------------------------------------*/
 @keyframes writting-bar-animation {
     50% {
-        height: 30%;
+        height: 20px;
     }
 }
