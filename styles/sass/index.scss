@@ -40,7 +40,7 @@
                 font-size: 50px;
                 font-weight: 900;
                 font-style: italic;
-                
+
             }
         }
 
@@ -52,15 +52,15 @@
             bottom: 0px;
             display: flex;
             align-items: center;
-            width: 800px;
+            width: 70%px;
             padding: 20px;
             border: 1px solid red;
 
-            .mayor__que__image{
+            .mayor__que__image {
                 width: 60%;
             }
 
-            .menor__que__img{
+            .menor__que__img {
                 position: absolute;
                 left: 400px;
                 width: 30%;
@@ -73,5 +73,16 @@
 @keyframes writting-bar-animation {
     50% {
         height: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bc__presentation__container__developer__mode {
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        border: 1px solid blue;
     }
 }
