@@ -27,10 +27,10 @@ h1, h2, h3, h4, h5, h6 {
     inset -2px -2px 4px var(--shadow-ligth);
   --shadow-container-outside: -10px -10px 20px var(--shadow-ligth),
     10px 10px 20px var(--shadow-dark);
-  --shadow-inside: inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth),
-    2px 2px 4px transparent,
-    -2px -2px 4px transparent;
+  --shadow-inside: inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-ligth),
+    4px 4px 8px transparent,
+    -4px -4px 8px transparent;
   --shadow-outside: inset 4px 4px 8px transparent,
     inset -4px -4px 8px transparent,
     4px 4px 8px var(--shadow-dark),
@@ -53,27 +53,25 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px 30px;
 }
 .bc__section__presentation__container {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
   width: 1400px;
+  min-height: 800px;
 }
 .bc__section__presentation__container__text {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  width: 500px;
+  z-index: 1;
 }
-.bc__section__presentation__container__text .bc__presentation__container__animation {
-  display: flex;
+.bc__section__presentation__container__text h1 {
   font-size: 50px;
   font-weight: 900;
   font-style: italic;
-}
-.bc__section__presentation__container__text h1 {
   margin-right: 20px;
-}
-.bc__section__presentation__container__text h1 {
-  font-size: 50px;
-  font-weight: 900;
-  font-style: italic;
 }
 .bc__section__presentation__container__text .bc__writting__bar {
   width: 3px;
@@ -83,11 +81,32 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotateZ(10deg);
   animation: writting-bar-animation 1s ease infinite;
 }
-.bc__section__presentation__container__text .bc__presentation__container__profession {
+.bc__section__presentation__container__text .bc__presentation__container__animation {
   display: flex;
+  flex-wrap: wrap;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
 }
-.bc__section__presentation__container__text .bc__presentation__container__profession .bc__animation__profession {
-  display: none;
+.bc__section__presentation__container .bc__presentation__container__developer__mode {
+  position: relative;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  width: 800px;
+  padding: 20px;
+  border: 1px solid red;
+}
+.bc__section__presentation__container .bc__presentation__container__developer__mode .mayor__que__image {
+  width: 60%;
+}
+.bc__section__presentation__container .bc__presentation__container__developer__mode .menor__que__img {
+  position: absolute;
+  left: 400px;
+  width: 30%;
 }
 
 /* Writting bar animation ---------------------------------------------*/

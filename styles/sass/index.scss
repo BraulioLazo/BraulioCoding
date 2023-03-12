@@ -4,30 +4,25 @@
     padding: 0px 30px;
 
     &__container {
+        position: relative;
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
         width: 1400px;
-     
+        min-height: 800px;
 
         &__text {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
+            width: 500px;
+            z-index: 1;
 
-            .bc__presentation__container__animation {
-                display: flex;
+            h1 {
                 font-size: 50px;
                 font-weight: 900;
                 font-style: italic;
-            }
-
-            h1 {
                 margin-right: 20px;
-            }
-
-            h1 {
-                font-size: 50px;
-                font-weight: 900;
-                font-style: italic;
             }
 
             .bc__writting__bar {
@@ -39,15 +34,37 @@
                 animation: writting-bar-animation 1s ease infinite;
             }
 
-            .bc__presentation__container__profession {
+            .bc__presentation__container__animation {
                 display: flex;
+                flex-wrap: wrap;
+                font-size: 50px;
+                font-weight: 900;
+                font-style: italic;
+                
+            }
+        }
 
-                .bc__animation__profession {
-                    display: none;
-                }
+        .bc__presentation__container__developer__mode {
+            position: relative;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            width: 800px;
+            padding: 20px;
+            border: 1px solid red;
+
+            .mayor__que__image{
+                width: 60%;
             }
 
-
+            .menor__que__img{
+                position: absolute;
+                left: 400px;
+                width: 30%;
+            }
         }
     }
 }
