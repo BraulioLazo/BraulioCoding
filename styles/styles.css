@@ -54,21 +54,28 @@ section {
   padding: 15px 0;
 }
 .bc__section__menu__container .bc__container__logo {
+  display: flex;
+  align-items: center;
+}
+.bc__section__menu__container .bc__container__logo .bc__logo__name {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
 }
-.bc__section__menu__container nav.bc__navegation {
+.bc__section__menu__container .bc__container__logo img {
+  height: 50px;
+}
+.bc__section__menu__container .bc__navegation {
   display: flex;
   align-items: center;
   gap: 25px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
 }
-.bc__section__menu__container nav.bc__navegation span {
+.bc__section__menu__container .bc__navegation span {
   cursor: pointer;
   transition: color 0.4s ease;
 }
-.bc__section__menu__container nav.bc__navegation span:hover {
+.bc__section__menu__container .bc__navegation span:hover {
   color: var(--color-main);
 }
 
@@ -108,6 +115,9 @@ section {
   }
   h2 {
     font-size: 20px;
+  }
+  .bc__section__menu__container nav.bc__navegation {
+    display: none;
   }
 }
 :root {
