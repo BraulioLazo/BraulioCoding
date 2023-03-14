@@ -61,7 +61,7 @@ section {
                 font-size: 25px;
             }
 
-            img {
+            img.bc__logo__img {
                 height: 50px;
             }
         }
@@ -130,6 +130,10 @@ section {
 
     .bc__section__menu__container{
         nav.bc__navegation {
+            display: none;
+        }
+
+        .bc__logo__name {
             display: none;
         }
     }
