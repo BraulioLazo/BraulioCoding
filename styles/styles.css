@@ -51,6 +51,7 @@ section {
 .bc__section__menu__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
 }
 .bc__section__menu__container .bc__container__logo {
@@ -77,6 +78,9 @@ section {
 }
 .bc__section__menu__container .bc__navegation span:hover {
   color: var(--color-main);
+}
+.bc__section__menu__container .bc__menu__icon {
+  display: none;
 }
 
 .bc__section__container {
@@ -107,6 +111,24 @@ section {
   section {
     padding: 0 20px;
   }
+  .bc__section__menu__container .bc__navegation {
+    display: none;
+  }
+  .bc__section__menu__container .bc__menu__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 35px;
+    height: 30px;
+    transition: all 0.4s ease;
+  }
+  .bc__section__menu__container .bc__menu__icon .bc__menu__line {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+  }
 }
 @media screen and (max-width: 768px) {
   h1 {
@@ -115,9 +137,6 @@ section {
   }
   h2 {
     font-size: 20px;
-  }
-  .bc__section__menu__container nav.bc__navegation {
-    display: none;
   }
   .bc__section__menu__container .bc__logo__name {
     display: none;

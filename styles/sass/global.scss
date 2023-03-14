@@ -50,6 +50,7 @@ section {
     &__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 15px 0;
 
         .bc__container__logo {
@@ -81,6 +82,10 @@ section {
             span:hover {
                 color: var(--color-main);
             }
+        }
+
+        .bc__menu__icon{
+            display: none;
         }
     }
 }
@@ -115,6 +120,29 @@ section {
     section {
         padding: 0 20px;
     }
+
+    .bc__section__menu__container{
+        .bc__navegation {
+            display: none;
+        }
+
+        .bc__menu__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px;
+            width: 35px;
+            height: 30px;
+            transition: all .4s ease;
+
+            .bc__menu__line{
+                width: 80%;
+                height: 3px;
+                background-color: white;
+            }
+        }
+    }
 }
 
 
@@ -129,10 +157,6 @@ section {
     }
 
     .bc__section__menu__container{
-        nav.bc__navegation {
-            display: none;
-        }
-
         .bc__logo__name {
             display: none;
         }
