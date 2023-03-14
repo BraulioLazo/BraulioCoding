@@ -23,6 +23,7 @@ h6 {
 h1 {
   font-size: 70px;
   font-weight: 600;
+  line-height: 80px;
 }
 
 p {
@@ -62,6 +63,7 @@ section {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 50px;
+    line-height: 60px;
   }
 }
 :root {
@@ -75,16 +77,13 @@ section {
 .bc__section__presentation {
   min-height: 800px;
   height: 100vh;
-  background-image: url(../../Images/FondoPresentacion.webp);
+  background-image: url(../Images/FondoPresentacion.webp);
   background-position: center;
   background-size: cover;
 }
 .bc__section__presentation__container__text {
   max-width: 800px;
   margin-top: 200px;
-}
-.bc__section__presentation__container__text h1 {
-  line-height: 80px;
 }
 .bc__section__presentation__container__text h2 {
   max-width: 400px;
