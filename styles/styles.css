@@ -77,7 +77,7 @@ section {
 .bc__section__presentation {
   min-height: 800px;
   height: 100vh;
-  background-image: url(../Images/FondoPresentacion.webp);
+  background-image: url(../Images/FondoPresentacion.webp) !important;
   background-position: center;
   background-size: cover;
 }
