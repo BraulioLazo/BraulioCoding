@@ -19,13 +19,13 @@ h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
+h1 {
     font-size: 70px;
     font-weight: 600;
     line-height: 80px;
 }
 
-h2{
+h2 {
     font-size: 25px;
 }
 
@@ -34,17 +34,54 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-section{
+section {
     display: flex;
     padding: 0 40px;
 }
 
-.bc__section__container{
+.bc__section__menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    color: #ffffff;
+    background-color: transparent;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+
+        .bc__container__logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+        }
+
+        nav.bc__navegation {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+
+            span {
+                cursor: pointer;
+                transition: color .4s ease;
+            }
+
+            span:hover {
+                color: var(--color-main);
+            }
+        }
+    }
+}
+
+.bc__section__container {
     width: 1800px;
     margin: 0 auto;
 }
 
-.bc__btn{
+.bc__btn {
     padding: 18px 38px;
     font-size: 18px;
     border-radius: 8px;
@@ -56,27 +93,29 @@ section{
     transition: all .4s ease;
 }
 
-.bc__btn:hover{
+.bc__btn:hover {
     border: 2px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
 }
 
+
+
 /* Media Queries --------------------------------------*/
-@media screen and (max-width: 1024px){
-    section{
+@media screen and (max-width: 1024px) {
+    section {
         padding: 0 20px;
     }
 }
 
 
 @media screen and (max-width: 768px) {
-    h1{
+    h1 {
         font-size: 40px;
         line-height: 45px;
     }
 
-    h2{
+    h2 {
         font-size: 20px;
     }
 }

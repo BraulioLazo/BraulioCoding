@@ -40,6 +40,38 @@ section {
   padding: 0 40px;
 }
 
+.bc__section__menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.bc__section__menu__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.bc__section__menu__container .bc__container__logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+.bc__section__menu__container nav.bc__navegation {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+.bc__section__menu__container nav.bc__navegation span {
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+.bc__section__menu__container nav.bc__navegation span:hover {
+  color: var(--color-main);
+}
+
 .bc__section__container {
   width: 1800px;
   margin: 0 auto;
