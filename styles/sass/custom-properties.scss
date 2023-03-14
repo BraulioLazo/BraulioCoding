@@ -1,37 +1,10 @@
 :root {
-    --shadow-dark: #b9c1ccda;
-    --shadow-ligth: #ffffff;
+    --background-color-container: #181c1e;
+    --background-color-main: #141416;
   
-    --shadow-container: -10px -10px 20px var(--shadow-ligth),
-      10px 10px 20px var(--shadow-dark),
-      inset 2px 2px 4px var(--shadow-dark),
-      inset -2px -2px 4px var(--shadow-ligth);
-  
-    --shadow-container-outside: -10px -10px 20px var(--shadow-ligth),
-      10px 10px 20px var(--shadow-dark);
-  
-    --shadow-inside: inset 4px 4px 8px var(--shadow-dark),
-      inset -4px -4px 8px var(--shadow-ligth),
-      4px 4px 8px transparent,
-      -4px -4px 8px transparent;
-  
-    --shadow-outside: inset 4px 4px 8px transparent,
-      inset -4px -4px 8px transparent,
-      4px 4px 8px var(--shadow-dark),
-      -4px -4px 8px var(--shadow-ligth);
-  
-    --shadow-both: inset 2px 2px 4px var(--shadow-dark),
-      inset -2px -2px 4px var(--shadow-ligth),
-      2px 2px 4px var(--shadow-dark),
-      -2px -2px 4px var(--shadow-ligth);
-  
-    --background-color-container: #ececec;
-    --background-color-main: #E6E9EF;
-  
-    --radius-circular: 100px;
     --radius-main: 15px;
   
     --padding-container: 20px;
-    --color-main: #0089DC;
+    --color-main: #fd6262;
   }
   

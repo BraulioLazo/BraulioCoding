@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,800;0,900;1,300;1,400;1,500;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -7,122 +7,96 @@
 }
 
 body {
-  background-color: var(--background-color-container);
+  background-color: var(--background-color-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 600;
 }
 
 p {
-  color: #777777;
+  color: #bababa;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #181818;
+section {
+  display: flex;
+  padding: 0 40px;
+}
+
+.bc__section__container {
+  width: 1800px;
+  margin: 0 auto;
+}
+
+.bc__btn {
+  padding: 18px 38px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid var(--color-main);
+  background-color: var(--color-main);
+  color: var(--background-color-main);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.bc__btn:hover {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 :root {
-  --shadow-dark: #b9c1ccda;
-  --shadow-ligth: #ffffff;
-  --shadow-container: -10px -10px 20px var(--shadow-ligth),
-    10px 10px 20px var(--shadow-dark),
-    inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth);
-  --shadow-container-outside: -10px -10px 20px var(--shadow-ligth),
-    10px 10px 20px var(--shadow-dark);
-  --shadow-inside: inset 4px 4px 8px var(--shadow-dark),
-    inset -4px -4px 8px var(--shadow-ligth),
-    4px 4px 8px transparent,
-    -4px -4px 8px transparent;
-  --shadow-outside: inset 4px 4px 8px transparent,
-    inset -4px -4px 8px transparent,
-    4px 4px 8px var(--shadow-dark),
-    -4px -4px 8px var(--shadow-ligth);
-  --shadow-both: inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth),
-    2px 2px 4px var(--shadow-dark),
-    -2px -2px 4px var(--shadow-ligth);
-  --background-color-container: #ececec;
-  --background-color-main: #E6E9EF;
-  --radius-circular: 100px;
+  --background-color-container: #181c1e;
+  --background-color-main: #141416;
   --radius-main: 15px;
   --padding-container: 20px;
-  --color-main: #0089DC;
+  --color-main: #fd6262;
 }
 
 .bc__section__presentation {
-  display: flex;
-  justify-content: center;
-  padding: 0px 30px;
-}
-.bc__section__presentation__container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 1400px;
   min-height: 800px;
+  height: 100vh;
+  background-image: url(/Images/FondoPresentacion.webp);
+  background-position: center;
+  background-size: cover;
 }
 .bc__section__presentation__container__text {
-  display: flex;
-  align-items: center;
-  width: 500px;
-  z-index: 1;
+  max-width: 800px;
+  margin-top: 200px;
 }
 .bc__section__presentation__container__text h1 {
-  font-size: 50px;
-  font-weight: 900;
-  font-style: italic;
-  margin-right: 20px;
+  line-height: 80px;
 }
-.bc__section__presentation__container__text .bc__writting__bar {
-  width: 3px;
-  height: 50px;
-  margin-left: 5px;
-  background-color: #181818;
-  transform: rotateZ(10deg);
-  animation: writting-bar-animation 1s ease infinite;
-}
-.bc__section__presentation__container__text .bc__presentation__container__animation {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 50px;
-  font-weight: 900;
-  font-style: italic;
-}
-.bc__section__presentation__container .bc__presentation__container__developer__mode {
-  position: relative;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: flex;
-  align-items: center;
-  width: 70% px;
-  padding: 20px;
-  border: 1px solid red;
-}
-.bc__section__presentation__container .bc__presentation__container__developer__mode .mayor__que__image {
-  width: 60%;
-}
-.bc__section__presentation__container .bc__presentation__container__developer__mode .menor__que__img {
-  position: absolute;
-  left: 400px;
-  width: 30%;
+.bc__section__presentation__container__text h2 {
+  max-width: 400px;
+  padding: 20px 0 30px 0;
 }
 
-/* Writting bar animation ---------------------------------------------*/
-@keyframes writting-bar-animation {
-  50% {
-    height: 20px;
-  }
-}
+/* Media Queries ----------------------------------------*/
 @media screen and (max-width: 1024px) {
-  .bc__presentation__container__developer__mode {
-    width: 100%;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    border: 1px solid blue;
+  .bc__section__presentation__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bc__section__presentation__container__text {
+    text-align: center;
+  }
+  .bc__section__presentation__container__text h2 {
+    margin: 0 auto;
   }
 }
 
