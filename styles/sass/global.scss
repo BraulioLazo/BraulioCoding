@@ -56,3 +56,10 @@ section{
     background-color: transparent;
     color: #ffffff;
 }
+
+/* Media Queries --------------------------------------*/
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 50px;
+    }
+}

@@ -1,7 +1,7 @@
 .bc__section__presentation {
     min-height: 800px;
     height: 100vh;
-    background-image: url(/Images/FondoPresentacion.webp);
+    background-image: url(../../Images/FondoPresentacion.webp);
     background-position: center;
     background-size: cover;
 
@@ -33,6 +33,7 @@
         align-items: center;
 
         &__text{
+            margin: 0;
             text-align: center;
 
             h2{

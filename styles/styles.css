@@ -58,6 +58,12 @@ section {
   color: #ffffff;
 }
 
+/* Media Queries --------------------------------------*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
 :root {
   --background-color-container: #181c1e;
   --background-color-main: #141416;
@@ -69,7 +75,7 @@ section {
 .bc__section__presentation {
   min-height: 800px;
   height: 100vh;
-  background-image: url(/Images/FondoPresentacion.webp);
+  background-image: url(../../Images/FondoPresentacion.webp);
   background-position: center;
   background-size: cover;
 }
@@ -93,6 +99,7 @@ section {
     align-items: center;
   }
   .bc__section__presentation__container__text {
+    margin: 0;
     text-align: center;
   }
   .bc__section__presentation__container__text h2 {
