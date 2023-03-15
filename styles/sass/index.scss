@@ -146,10 +146,14 @@
 
                 &__description{
                     width: 100%;
+                    padding: 120px;
+                    border-right: none;
+                    border-bottom: 1px solid var(--border-color-main);
                 }
 
                 &__skills {
                     width: 100%;
+                    z-index: 1;
                 }
 
             }
