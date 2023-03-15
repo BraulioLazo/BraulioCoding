@@ -218,6 +218,7 @@ section {
 .bc__section__skills__container__text__skills {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   width: 60%;
   padding: 20px;
