@@ -143,8 +143,8 @@
         &__container {
 
             &__text {
-              
-                &__description{
+
+                &__description {
                     width: 100%;
                     padding: 120px;
                     border-right: none;
@@ -156,7 +156,6 @@
                     width: 100%;
                     z-index: 1;
 
-                    
                 }
 
             }
@@ -169,11 +168,15 @@
         &__container {
 
             &__text {
-              
-                &__description{
+
+                &__description {
                     width: 100%;
                     padding: 100px 20px;
-                    
+
+                    h2,
+                    p {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -182,10 +185,11 @@
 
 
 @media screen and (max-width: 639px) {
-    #bc__section__skills{
+    #bc__section__skills {
         .bc__skills__container__group__one {
             margin-bottom: 0;
         }
+
         .bc__skills__container__group__two {
             margin-bottom: -100px;
         }

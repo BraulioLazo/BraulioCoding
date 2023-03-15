@@ -287,6 +287,10 @@ section {
     width: 100%;
     padding: 100px 20px;
   }
+  .bc__section__skills__container__text__description h2,
+  .bc__section__skills__container__text__description p {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 639px) {
   #bc__section__skills .bc__skills__container__group__one {
