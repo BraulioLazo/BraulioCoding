@@ -146,7 +146,7 @@
               
                 &__description{
                     width: 100%;
-                    padding: 120px 20px;
+                    padding: 120px;
                     border-right: none;
                     border-bottom: 1px solid var(--border-color-main);
                 }
@@ -163,6 +163,23 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .bc__section__skills {
+        &__container {
+
+            &__text {
+              
+                &__description{
+                    width: 100%;
+                    padding: 100px 20px;
+                    
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 639px) {
     #bc__section__skills{

@@ -272,7 +272,7 @@ section {
   /*Section SKILLS ---------------*/
   .bc__section__skills__container__text__description {
     width: 100%;
-    padding: 120px 20px;
+    padding: 120px;
     border-right: none;
     border-bottom: 1px solid var(--border-color-main);
   }
@@ -280,6 +280,12 @@ section {
     flex-wrap: wrap;
     width: 100%;
     z-index: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bc__section__skills__container__text__description {
+    width: 100%;
+    padding: 100px 20px;
   }
 }
 @media screen and (max-width: 639px) {
