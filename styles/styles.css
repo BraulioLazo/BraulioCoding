@@ -218,7 +218,6 @@ section {
 .bc__section__skills__container__text__skills {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
   width: 60%;
   padding: 20px;
@@ -250,10 +249,10 @@ section {
   background-color: var(--border-color-main);
 }
 .bc__section__skills__container__text__skills .bc__skills__container__group__one {
-  margin-top: -100px;
+  margin: -100px 0;
 }
 .bc__section__skills__container__text__skills .bc__skills__container__group__two {
-  margin-bottom: -100px;
+  align-content: center;
 }
 
 /* Media Queries ----------------------------------------*/
@@ -273,13 +272,22 @@ section {
   /*Section SKILLS ---------------*/
   .bc__section__skills__container__text__description {
     width: 100%;
-    padding: 120px;
+    padding: 120px 20px;
     border-right: none;
     border-bottom: 1px solid var(--border-color-main);
   }
   .bc__section__skills__container__text__skills {
+    flex-wrap: wrap;
     width: 100%;
     z-index: 1;
+  }
+}
+@media screen and (max-width: 639px) {
+  #bc__section__skills .bc__skills__container__group__one {
+    margin-bottom: 0;
+  }
+  #bc__section__skills .bc__skills__container__group__two {
+    margin-bottom: -100px;
   }
 }
 
