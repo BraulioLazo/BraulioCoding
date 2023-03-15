@@ -58,8 +58,10 @@ section {
             align-items: center;
 
             .bc__logo__name {
-                font-family: 'Poppins', sans-serif;
+                font-family: 'Montserrat', sans-serif !important;
                 font-size: 25px;
+                font-weight: 700;
+                font-style: italic;
             }
 
             img.bc__logo__img {
@@ -148,8 +150,8 @@ section {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 40px;
-        line-height: 45px;
+        font-size: 35px;
+        line-height: 40px;
     }
 
     h2 {
