@@ -196,9 +196,9 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 50px;
 
-            .bc__container__number{
+            .bc__container__number {
                 width: 200px;
                 text-align: center;
 
@@ -206,15 +206,15 @@
                     color: var(--color-main);
                 }
 
-                .bc__numbers__line{
-                   width: 100%;
-                   margin-top: 20px;
-                   border-radius: 5px;
-                   border: 2px solid var(--border-color-main);
+                .bc__numbers__line {
+                    width: 100%;
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    border: 2px solid var(--border-color-main);
                 }
             }
         }
-       
+
     }
 }
 
@@ -264,6 +264,25 @@
                 }
 
             }
+        }
+    }
+
+    /*Section OUR Numbers -----------*/
+    .bc__section__our__numbers {
+
+        &__container {
+
+            &__numbers {
+
+                .bc__container__number {
+
+                    h1 {
+                        font-size: 70px;
+                        line-height: 75px;
+                    }
+                }
+            }
+
         }
     }
 }

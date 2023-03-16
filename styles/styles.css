@@ -321,7 +321,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
 }
 .bc__section__our__numbers__container__numbers .bc__container__number {
   width: 200px;
@@ -366,6 +366,11 @@ section {
     flex-wrap: wrap;
     width: 100%;
     z-index: 1;
+  }
+  /*Section OUR Numbers -----------*/
+  .bc__section__our__numbers__container__numbers .bc__container__number h1 {
+    font-size: 70px;
+    line-height: 75px;
   }
 }
 @media screen and (max-width: 850px) {
