@@ -58,10 +58,10 @@
 
                 .background__filter {
                     position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    bottom: 0px;
-                    left: 0px;
+                    top: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    left: 2px;
                     background-color: rgba(0, 0, 0, 0.6);
                 }
             }
@@ -84,7 +84,7 @@
                     .bc__skill__container {
                         width: 250px;
                         padding: 20px;
-                        border-radius: 12px;
+                        border-radius: var(--radius-main);
                         background-color: var(--background-color-container);
 
                         img {

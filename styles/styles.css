@@ -211,10 +211,10 @@ section {
 }
 .bc__section__skills__container__text__description .background__filter {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .bc__section__skills__container__text__skills {
@@ -233,7 +233,7 @@ section {
 .bc__section__skills__container__text__skills .bc__skills__container__group .bc__skill__container {
   width: 250px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: var(--radius-main);
   background-color: var(--background-color-container);
 }
 .bc__section__skills__container__text__skills .bc__skills__container__group .bc__skill__container img {
