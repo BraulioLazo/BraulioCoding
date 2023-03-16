@@ -58,10 +58,10 @@
 
                 .background__filter {
                     position: absolute;
-                    top: 2px;
-                    right: 2px;
-                    bottom: 2px;
-                    left: 2px;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
                     background-color: rgba(0, 0, 0, 0.6);
                 }
             }
@@ -130,6 +130,7 @@
             border: 1px solid var(--border-color-main);
 
             &__header {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -139,26 +140,81 @@
                 background-image: url(../Images/background__about.webp);
                 background-size: cover;
                 background-position: center;
+
+                h2 {
+                    z-index: 1;
+                }
+
+                .background__filter {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
             }
 
-            &__description{
+            &__description {
                 width: 50%;
                 padding: 80px 20px;
 
-                &__container{
+                &__container {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 20px;
                     max-width: 400px;
                     margin: 0 auto;
 
-                    button{
+                    button {
                         margin-top: 8px;
                     }
                 }
 
             }
         }
+    }
+}
+
+/*Section NUMBERS ---------------------------------------*/
+
+.bc__section__our__numbers {
+    background-image: url(/Images/background__our__numbers.webp);
+    background-size: cover;
+    background-position: center bottom;
+
+    &__container {
+        min-height: 600px;
+        margin: 80px auto;
+
+        h2 {
+            margin: 0px auto 60px auto;
+            text-align: center;
+        }
+
+        &__numbers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .bc__container__number{
+                width: 200px;
+                text-align: center;
+
+                h1 {
+                    color: var(--color-main);
+                }
+
+                .bc__numbers__line{
+                   width: 100%;
+                   margin-top: 20px;
+                   border-radius: 5px;
+                   border: 2px solid var(--border-color-main);
+                }
+            }
+        }
+       
     }
 }
 
@@ -194,7 +250,8 @@
                     border-right: none;
                     border-bottom: 1px solid var(--border-color-main);
 
-                    h2{
+                    h2,
+                    p {
                         text-align: center;
                     }
                 }
@@ -211,36 +268,37 @@
     }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
     .bc__section__about {
 
         &__container {
-    
+
             &__text {
                 flex-wrap: wrap;
+
                 &__header {
                     width: 100%;
                     border-right: none;
                     border-bottom: 1px solid var(--border-color-main);
 
-                    h2{
+                    h2 {
                         text-align: center;
                     }
                 }
-    
-                &__description{
+
+                &__description {
                     width: 100%;
-    
-                    &__container{
-                        p{
+
+                    &__container {
+                        p {
                             text-align: center;
                         }
-    
-                        button{
+
+                        button {
                             margin: 8px auto 0px auto;
                         }
                     }
-    
+
                 }
             }
         }

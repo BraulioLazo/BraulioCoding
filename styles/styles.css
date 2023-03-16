@@ -211,10 +211,10 @@ section {
 }
 .bc__section__skills__container__text__description .background__filter {
   position: absolute;
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-  left: 2px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .bc__section__skills__container__text__skills {
@@ -266,6 +266,7 @@ section {
   border: 1px solid var(--border-color-main);
 }
 .bc__section__about__container__text__header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +276,17 @@ section {
   background-image: url(../Images/background__about.webp);
   background-size: cover;
   background-position: center;
+}
+.bc__section__about__container__text__header h2 {
+  z-index: 1;
+}
+.bc__section__about__container__text__header .background__filter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .bc__section__about__container__text__description {
   width: 50%;
@@ -289,6 +301,40 @@ section {
 }
 .bc__section__about__container__text__description__container button {
   margin-top: 8px;
+}
+
+/*Section NUMBERS ---------------------------------------*/
+.bc__section__our__numbers {
+  background-image: url(/Images/background__our__numbers.webp);
+  background-size: cover;
+  background-position: center bottom;
+}
+.bc__section__our__numbers__container {
+  min-height: 600px;
+  margin: 80px auto;
+}
+.bc__section__our__numbers__container h2 {
+  margin: 0px auto 60px auto;
+  text-align: center;
+}
+.bc__section__our__numbers__container__numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.bc__section__our__numbers__container__numbers .bc__container__number {
+  width: 200px;
+  text-align: center;
+}
+.bc__section__our__numbers__container__numbers .bc__container__number h1 {
+  color: var(--color-main);
+}
+.bc__section__our__numbers__container__numbers .bc__container__number .bc__numbers__line {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color-main);
 }
 
 /* Media Queries ----------------------------------------*/
@@ -312,7 +358,8 @@ section {
     border-right: none;
     border-bottom: 1px solid var(--border-color-main);
   }
-  .bc__section__skills__container__text__description h2 {
+  .bc__section__skills__container__text__description h2,
+  .bc__section__skills__container__text__description p {
     text-align: center;
   }
   .bc__section__skills__container__text__skills {
