@@ -136,7 +136,7 @@
                 width: 50%;
                 padding: 150px 20px;
                 border-right: 1px solid var(--border-color-main);
-                background-image: url(/Images/background__about.webp);
+                background-image: url(../Images/background__about.webp);
                 background-size: cover;
                 background-position: center;
             }
@@ -177,6 +177,7 @@
             h2 {
                 margin: 0 auto;
             }
+
         }
     }
 
@@ -192,6 +193,10 @@
                     padding: 120px;
                     border-right: none;
                     border-bottom: 1px solid var(--border-color-main);
+
+                    h2{
+                        text-align: center;
+                    }
                 }
 
                 &__skills {
