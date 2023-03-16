@@ -305,7 +305,7 @@ section {
 
 /*Section NUMBERS ---------------------------------------*/
 .bc__section__our__numbers {
-  background-image: url(/Images/background__our__numbers.webp);
+  background-image: url(../Images/background__our__numbers.webp);
   background-size: cover;
   background-position: center bottom;
 }
