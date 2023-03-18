@@ -203,6 +203,7 @@
             .bc__container__number {
                 width: 200px;
                 text-align: center;
+                z-index: 2;
 
                 h1 {
                     color: var(--color-main);
@@ -269,7 +270,7 @@
             flex-wrap: wrap;
             gap: 30px;
             width: 60%;
-            padding: 80px;
+            padding: 40px;
             border-right: 1px solid var(--border-color-main);
 
             img{
@@ -356,8 +357,8 @@
                 .bc__container__number {
 
                     h1 {
-                        font-size: 70px;
-                        line-height: 75px;
+                        font-size: 60px;
+                        line-height: 65px;
                     }
                 }
             }
@@ -416,6 +417,10 @@
                   width: 100%;
                   border-right: none;
                   border-bottom: 1px solid var(--border-color-main);
+
+                  img{
+                     border-radius: 8px;
+                  }
               }
       
               &__description__app{
@@ -446,6 +451,26 @@
                     }
                 }
             }
+        }
+    }
+
+    /*Section OUR Numbers--------*/
+    .bc__section__our__numbers {
+        min-height: 100vh;
+
+        &__container {
+
+            &__numbers {
+
+                .bc__container__number {
+
+                    h1 {
+                        font-size: 60px;
+                        line-height: 65px;
+                    }
+                }
+            }
+
         }
     }
 }

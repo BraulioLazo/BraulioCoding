@@ -327,6 +327,7 @@ section {
 .bc__section__our__numbers__container__numbers .bc__container__number {
   width: 200px;
   text-align: center;
+  z-index: 2;
 }
 .bc__section__our__numbers__container__numbers .bc__container__number h1 {
   color: var(--color-main);
@@ -382,7 +383,7 @@ section {
   flex-wrap: wrap;
   gap: 30px;
   width: 60%;
-  padding: 80px;
+  padding: 40px;
   border-right: 1px solid var(--border-color-main);
 }
 .bc__section__portfolio__container__portfolio__img__app img {
@@ -436,8 +437,8 @@ section {
   }
   /*Section OUR Numbers -----------*/
   .bc__section__our__numbers__container__numbers .bc__container__number h1 {
-    font-size: 70px;
-    line-height: 75px;
+    font-size: 60px;
+    line-height: 65px;
   }
 }
 @media screen and (max-width: 850px) {
@@ -468,6 +469,9 @@ section {
     border-right: none;
     border-bottom: 1px solid var(--border-color-main);
   }
+  .bc__section__portfolio__container__portfolio__img__app img {
+    border-radius: 8px;
+  }
   .bc__section__portfolio__container__portfolio__description__app {
     width: 100%;
   }
@@ -483,6 +487,14 @@ section {
   .bc__section__skills__container__text__description h2,
   .bc__section__skills__container__text__description p {
     text-align: center;
+  }
+  /*Section OUR Numbers--------*/
+  .bc__section__our__numbers {
+    min-height: 100vh;
+  }
+  .bc__section__our__numbers__container__numbers .bc__container__number h1 {
+    font-size: 60px;
+    line-height: 65px;
   }
 }
 @media screen and (max-width: 639px) {
