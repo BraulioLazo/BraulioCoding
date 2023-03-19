@@ -67,3 +67,41 @@ footer#bc__footer {
         font-style: italic;
     }
 }
+
+/* Media Queries --------------------------------------*/
+@media screen and (max-width: 1024px) {
+
+    .bc__section__menu__container{
+        .bc__navegation {
+            display: none;
+        }
+
+        .bc__menu__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            width: 30px;
+            height: 25px;
+            transition: all .4s ease;
+
+            .bc__menu__line{
+                width: 80%;
+                height: 2px;
+                background-color: white;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .bc__section__menu__container{
+        .bc__logo__name {
+            display: none;
+        }
+    }
+    
+}

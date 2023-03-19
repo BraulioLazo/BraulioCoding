@@ -175,6 +175,33 @@ footer#bc__footer small {
   font-style: italic;
 }
 
+/* Media Queries --------------------------------------*/
+@media screen and (max-width: 1024px) {
+  .bc__section__menu__container .bc__navegation {
+    display: none;
+  }
+  .bc__section__menu__container .bc__menu__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 30px;
+    height: 25px;
+    transition: all 0.4s ease;
+  }
+  .bc__section__menu__container .bc__menu__icon .bc__menu__line {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bc__section__menu__container .bc__logo__name {
+    display: none;
+  }
+}
 .bc__section__presentation {
   min-height: 800px;
   height: 100vh;
