@@ -55,6 +55,11 @@
                     z-index: 1;
                 }
 
+                p {
+                    text-indent: 15px;
+
+                }
+
                 .background__filter {
                     position: absolute;
                     top: 0px;
@@ -165,6 +170,11 @@
                     max-width: 400px;
                     margin: 0 auto;
 
+                    p {
+                        text-indent: 15px;
+
+                    }
+
                     button {
                         margin-top: 8px;
                     }
@@ -219,7 +229,7 @@
 
     }
 
-    .bc__section__our__numbers__gradient{
+    .bc__section__our__numbers__gradient {
         position: absolute;
         bottom: 0px;
         left: 0px;
@@ -231,71 +241,72 @@
 
 /* Section Portfolio ------------------------------------*/
 
-.bc__section__portfolio{
-  padding: 00px 30px 100px 30px;
+.bc__section__portfolio {
+    padding: 00px 30px 100px 30px;
 
 
-  &__container{
-    margin-top: -100px;
-    z-index: 1;
+    &__container {
+        margin-top: -100px;
+        z-index: 1;
 
-     &__portfolio{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        background-color: black;
-        border: 1px solid var(--border-color-main);
-        z-index: 3;
-
-        .bc__container__apps{
+        &__portfolio {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
-            border-bottom: 1px solid var(--border-color-main);
+            background-color: black;
+            border: 1px solid var(--border-color-main);
+            z-index: 3;
 
-            .bc__container__apps__title{
+            .bc__container__apps {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                border-bottom: 1px solid var(--border-color-main);
+
+                .bc__container__apps__title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+
+            &__img__app {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
-                height: 200px;
+                align-content: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                width: 60%;
+                padding: 40px;
+                border-right: 1px solid var(--border-color-main);
+
+                img {
+                    width: 100%;
+                    border-radius: var(--radius-main);
+                    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.4);
+                }
+            }
+
+            &__description__app {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                width: 40%;
+                padding: 20px;
+
+                p {
+                    max-width: 500px;
+                    text-indent: 15px;
+                }
             }
         }
-
-        &__img__app{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            width: 60%;
-            padding: 40px;
-            border-right: 1px solid var(--border-color-main);
-
-            img{
-                width: 100%;
-                border-radius: var(--radius-main);
-                box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.4);
-            }
-        }
-
-        &__description__app{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 40%;
-            padding: 20px;
-
-            p{
-                max-width: 500px;
-            }
-        }
-     }
-  }
+    }
 }
 
 /* Media Queries ----------------------------------------*/
@@ -406,33 +417,33 @@
     }
 
     /*Section Portfolio-------*/
-    .bc__section__portfolio{
-      
-      
-        &__container{
-      
-           &__portfolio{
-      
-              &__img__app{
-                  width: 100%;
-                  border-right: none;
-                  border-bottom: 1px solid var(--border-color-main);
+    .bc__section__portfolio {
 
-                  img{
-                     border-radius: 8px;
-                  }
-              }
-      
-              &__description__app{
-                  width: 100%;
 
-                  p{
-                    text-align: center;
-                  }
-              }
-           }
+        &__container {
+
+            &__portfolio {
+
+                &__img__app {
+                    width: 100%;
+                    border-right: none;
+                    border-bottom: 1px solid var(--border-color-main);
+
+                    img {
+                        border-radius: 8px;
+                    }
+                }
+
+                &__description__app {
+                    width: 100%;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
         }
-      }
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -151,6 +151,7 @@ section {
 .bc__section__menu__container .bc__navegation span {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
   transition: color 0.4s ease;
 }
@@ -224,6 +225,9 @@ footer#bc__footer small {
 .bc__section__skills__container__text__description p {
   max-width: 350px;
   z-index: 1;
+}
+.bc__section__skills__container__text__description p {
+  text-indent: 15px;
 }
 .bc__section__skills__container__text__description .background__filter {
   position: absolute;
@@ -314,6 +318,9 @@ footer#bc__footer small {
   gap: 20px;
   max-width: 400px;
   margin: 0 auto;
+}
+.bc__section__about__container__text__description__container p {
+  text-indent: 15px;
 }
 .bc__section__about__container__text__description__container button {
   margin-top: 8px;
@@ -420,6 +427,7 @@ footer#bc__footer small {
 }
 .bc__section__portfolio__container__portfolio__description__app p {
   max-width: 500px;
+  text-indent: 15px;
 }
 
 /* Media Queries ----------------------------------------*/
