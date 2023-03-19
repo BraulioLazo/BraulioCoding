@@ -382,6 +382,7 @@ footer#bc__footer small {
 }
 .bc__section__our__numbers__container__numbers .bc__container__number h1 {
   color: var(--color-main);
+  opacity: 0;
 }
 .bc__section__our__numbers__container__numbers .bc__container__number .bc__numbers__line {
   width: 0%;
