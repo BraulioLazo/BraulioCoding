@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 p {
@@ -37,55 +37,13 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
+strong {
+  color: var(--color-main);
+}
+
 section {
   display: flex;
   padding: 0 40px;
-}
-
-.bc__section__menu {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  color: #ffffff;
-  background-color: black;
-  z-index: 999;
-}
-.bc__section__menu__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-}
-.bc__section__menu__container .bc__container__logo {
-  display: flex;
-  align-items: center;
-}
-.bc__section__menu__container .bc__container__logo .bc__logo__name {
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 25px;
-  font-weight: 700;
-  font-style: italic;
-}
-.bc__section__menu__container .bc__container__logo img.bc__logo__img {
-  height: 50px;
-}
-.bc__section__menu__container .bc__navegation {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-.bc__section__menu__container .bc__navegation span {
-  cursor: pointer;
-  transition: color 0.4s ease;
-}
-.bc__section__menu__container .bc__navegation span:hover {
-  color: var(--color-main);
-}
-.bc__section__menu__container .bc__menu__icon {
-  display: none;
 }
 
 .bc__section__container {
@@ -157,6 +115,65 @@ section {
   --border-color-main: #535353;
 }
 
+.bc__section__menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  color: #ffffff;
+  background-color: black;
+  z-index: 999;
+}
+.bc__section__menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.bc__section__menu__container .bc__container__logo {
+  display: flex;
+  align-items: center;
+}
+.bc__section__menu__container .bc__container__logo .bc__logo__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: italic;
+}
+.bc__section__menu__container .bc__container__logo img.bc__logo__img {
+  height: 50px;
+}
+.bc__section__menu__container .bc__navegation {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.bc__section__menu__container .bc__navegation span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+.bc__section__menu__container .bc__navegation span:hover {
+  color: var(--color-main);
+}
+.bc__section__menu__container .bc__menu__icon {
+  display: none;
+}
+
+footer#bc__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+footer#bc__footer small {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+}
+
 .bc__section__presentation {
   min-height: 800px;
   height: 100vh;
@@ -173,7 +190,7 @@ section {
   max-width: 800px;
 }
 .bc__section__presentation__container__text h2 {
-  max-width: 400px;
+  max-width: 500px;
   padding: 20px 0 30px 0;
 }
 
@@ -380,6 +397,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   gap: 30px;
   width: 60%;

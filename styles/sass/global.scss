@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 p {
@@ -35,64 +35,16 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+strong{
+    color: var(--color-main);
+}
+
 section {
     display: flex;
     padding: 0 40px;
 }
 
-.bc__section__menu {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    color: #ffffff;
-    background-color: black;
-    z-index: 999;
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-
-        .bc__container__logo {
-            display: flex;
-            align-items: center;
-
-            .bc__logo__name {
-                font-family: 'Montserrat', sans-serif !important;
-                font-size: 25px;
-                font-weight: 700;
-                font-style: italic;
-            }
-
-            img.bc__logo__img {
-                height: 50px;
-            }
-        }
-
-        .bc__navegation {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 18px;
-
-            span {
-                cursor: pointer;
-                transition: color .4s ease;
-            }
-
-            span:hover {
-                color: var(--color-main);
-            }
-        }
-
-        .bc__menu__icon{
-            display: none;
-        }
-    }
-}
 
 .bc__section__container {
     width: 1800px;
