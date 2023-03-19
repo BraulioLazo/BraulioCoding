@@ -291,11 +291,12 @@ footer#bc__footer small {
   color: #889ce7;
 }
 .bc__section__skills__container__text__skills .bc__skills__container__group .bc__skill__container .skills__line {
-  width: 100%;
+  width: 0%;
   height: 3px;
   margin-top: 20px;
   border-radius: 5px;
   background-color: var(--border-color-main);
+  opacity: 0;
 }
 .bc__section__skills__container__text__skills .bc__skills__container__group__one {
   margin: -100px 0;
@@ -383,10 +384,11 @@ footer#bc__footer small {
   color: var(--color-main);
 }
 .bc__section__our__numbers__container__numbers .bc__container__number .bc__numbers__line {
-  width: 100%;
+  width: 0%;
   margin-top: 20px;
   border-radius: 5px;
   border: 2px solid var(--border-color-main);
+  opacity: 0;
 }
 .bc__section__our__numbers .bc__section__our__numbers__gradient {
   position: absolute;
