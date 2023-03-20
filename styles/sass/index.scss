@@ -20,6 +20,17 @@
     }
 }
 
+.animation__right,
+.animation__right__on__load {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.animation__up {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
 /*Section Skills ----------------------------------------*/
 
 .bc__section__skills {
