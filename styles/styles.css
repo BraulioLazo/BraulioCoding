@@ -232,6 +232,11 @@ footer#bc__footer small {
   opacity: 0;
 }
 
+.animation__left {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
 /*Section Skills ----------------------------------------*/
 .bc__section__skills {
   padding-bottom: 120px;
