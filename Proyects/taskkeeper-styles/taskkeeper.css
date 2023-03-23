@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #777777;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  min-height: 850px;
+  background-color: var(--tk-background-color-main);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+}
+
+:root {
+  /*  Task Keeper Custom Properties -----------------------*/
+  --tk-shadow-dark: #b9c1ccda;
+  --tk-shadow-ligth: #ffffff;
+  --tk-shadow-container: -10px -10px 20px var(--tk-shadow-ligth),
+    10px 10px 20px var(--tk-shadow-dark),
+    inset 2px 2px 4px var(--tk-shadow-dark),
+    inset -2px -2px 4px var(--tk-shadow-ligth);
+  --tk-shadow-container-outside: -10px -10px 20px var(--tk-shadow-ligth),
+    10px 10px 20px var(--tk-shadow-dark);
+  --tk-shadow-inside: inset 2px 2px 4px var(--tk-shadow-dark),
+    inset -2px -2px 4px var(--tk-shadow-ligth),
+    2px 2px 4px transparent,
+    -2px -2px 4px transparent;
+  --tk-shadow-outside: inset 4px 4px 8px transparent,
+    inset -4px -4px 8px transparent,
+    4px 4px 8px var(--tk-shadow-dark),
+    -4px -4px 8px var(--tk-shadow-ligth);
+  --tk-shadow-both: inset 2px 2px 4px var(--tk-shadow-dark),
+    inset -2px -2px 4px var(--tk-shadow-ligth),
+    2px 2px 4px var(--tk-shadow-dark),
+    -2px -2px 4px var(--tk-shadow-ligth);
+  --tk-background-color-container: #ececec;
+  --tk-background-color-main: #E6E9EF;
+  --tk-radius-circular: 100px;
+  --tk-radius-main: 15px;
+  --tk-padding-container: 20px;
+  --tk-color-main: #0089DC;
+}
+
+.tk__section_menu {
+  height: 100%;
+}
+.tk__section_menu .tk__section_menu__container {
+  position: relative;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 100%;
+  padding: 30px;
+  background-color: var(--tk-background-color-container);
+  box-shadow: 10px 0px 20px var(--tk-shadow-dark);
+}
+.tk__section_menu .tk__section_menu__container .tk__logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid var(--tk-background-color-container);
+  box-shadow: var(--tk-shadow-container);
+}
+.tk__section_menu .tk__section_menu__container .tk__logo__container img {
+  width: 60px;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container h2 {
+  margin-top: 20px;
+  font-style: italic;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container img {
+  width: 25px;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container .tk__note__priority {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container button,
+.tk__section_menu .tk__section_menu__container .tk__tools__container button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  background-color: var(--background-color-container);
+  transition: transform 0.4s ease;
+}
+.tk__section_menu .tk__section_menu__container .tk__note__priority:hover,
+.tk__section_menu .tk__section_menu__container button:hover,
+.tk__section_menu .tk__section_menu__container .tk__tools:hover {
+  font-weight: 600;
+  transform: scale(1.06, 1.06);
+}
+.tk__section_menu .tk__section_menu__container .tk__tools__container {
+  width: 100%;
+}
+.tk__section_menu .tk__section_menu__container .tk__tools__container .tk__tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.tk__section_menu .tk__section_menu__container .tk__tools__container .tk__tools img {
+  width: 25px;
+}
+
+/*Media Queries ----------------------------------*/
+
+/*# sourceMappingURL=taskkeeper.css.map */

@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #777777;
+    font-size: 18px;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    min-height: 850px;
+    background-color: var(--tk-background-color-main);
+}
+
+main{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+}
+
