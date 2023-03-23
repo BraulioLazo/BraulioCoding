@@ -1,13 +1,12 @@
 let numberToAnimate;
 
 function startAnimations() {
+    deployMenu();
     onScroll();
     window.addEventListener("scroll", onScroll);
 
 }
 window.addEventListener("load", startAnimations);
-
-
 
 
 /* Animination on SCROLL -------------------------------*/
@@ -118,4 +117,14 @@ function animationLeft(element){
     element.style.transform = "translateX(0px)";
     element.style.opacity = "1";
     element.style.transition = "all 1.5s ease-out";
+}
+
+/* Desplegar Menu ---------------------------------------*/
+
+function deployMenu(){
+    const menuIcon = document.querySelector(".bc__menu__icon");
+    menuIcon.addEventListener("click", () => {
+        const menu = document.querySelector(".bc__navegation");
+        menu.classList.toggle("deploy__menu")
+    })
 }
