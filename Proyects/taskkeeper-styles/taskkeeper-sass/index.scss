@@ -1,0 +1,99 @@
+.tk__section_menu{
+    height: 100%;
+
+    .tk__section_menu__container {
+        position: relative;
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        width: 250px;
+        height: 100%;
+        padding: 30px;
+        background-color: var(--tk-background-color-container);
+        box-shadow: 10px 0px 20px var(--tk-shadow-dark);
+    
+        .tk__logo__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid var(--tk-background-color-container);
+            box-shadow: var(--tk-shadow-container);
+    
+            img {
+                width: 60px;
+            }
+        }
+    
+        .tk__ideas__priority__container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+    
+            h2 {
+                margin-top: 20px;
+                font-style: italic;
+            }
+    
+            img {
+                width: 25px;
+            }
+    
+            .tk__note__priority {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                transition: transform .4s ease;
+    
+            }
+        }
+    
+        .tk__ideas__priority__container button,
+        .tk__tools__container button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            cursor: pointer;
+            background-color: var(--background-color-container);
+            transition: transform .4s ease;
+        }
+    
+        .tk__note__priority:hover,
+        button:hover,
+        .tk__tools:hover {
+            font-weight: 600;
+            transform: scale(1.06, 1.06);
+        }
+    
+    
+        .tk__tools__container {
+            width: 100%;
+    
+            .tk__tools {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                transition: transform .4s ease;
+    
+                img {
+                    width: 25px;
+                }
+    
+            }
+        }
+    }
+}
+
+/*Media Queries ----------------------------------*/
+
+@media screen and (max-width: 1024px){
+    
+}
