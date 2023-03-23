@@ -113,33 +113,6 @@ section {
   --padding-container: 20px;
   --color-main: #fd6262;
   --border-color-main: #535353;
-  /*  Task Keeper Custom Properties -----------------------*/
-  --tk-shadow-dark: #b9c1ccda;
-  --shadow-ligth: #ffffff;
-  --tk-shadow-container: -10px -10px 20px var(--shadow-ligth),
-    10px 10px 20px var(--shadow-dark),
-    inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth);
-  --tk-shadow-container-outside: -10px -10px 20px var(--shadow-ligth),
-    10px 10px 20px var(--shadow-dark);
-  --tk-shadow-inside: inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth),
-    2px 2px 4px transparent,
-    -2px -2px 4px transparent;
-  --tk-shadow-outside: inset 4px 4px 8px transparent,
-    inset -4px -4px 8px transparent,
-    4px 4px 8px var(--shadow-dark),
-    -4px -4px 8px var(--shadow-ligth);
-  --tk-shadow-both: inset 2px 2px 4px var(--shadow-dark),
-    inset -2px -2px 4px var(--shadow-ligth),
-    2px 2px 4px var(--shadow-dark),
-    -2px -2px 4px var(--shadow-ligth);
-  --tk-background-color-container: #ececec;
-  --tk-background-color-main: #E6E9EF;
-  --tk-radius-circular: 100px;
-  --tk-radius-main: 15px;
-  --tk-padding-container: 20px;
-  --tk-color-main: #0089DC;
 }
 
 .bc__section__menu {
@@ -209,7 +182,7 @@ footer#bc__footer small {
 
 /* Media Queries --------------------------------------*/
 @media screen and (max-width: 1024px) {
-  .bc__section__menu__container .bc__navegation {
+  .bc__section__menu__container ul.bc__navegation {
     display: none;
   }
   .bc__section__menu__container .bc__menu__icon {
