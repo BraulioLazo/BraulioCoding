@@ -110,17 +110,22 @@ section.deploy__menu{
     main{
         .tk__icono__menu__container{
             display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
             position: fixed;
             top: 15px;
             left: 15px;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             padding: 5px;
             border-radius: 50%;
-            box-shadow: var(--tk-shadow-outside);
+            border: 3px solid var(--tk-background-color-container);
+            box-shadow: var(--tk-shadow-both);
             background-color: var(--tk-background-color-container);
+
             img{
-                width: 100%;
+                width: 90%;
             }
         }
     }
