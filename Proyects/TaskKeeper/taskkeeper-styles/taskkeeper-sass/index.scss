@@ -123,6 +123,7 @@ section.deploy__menu{
             border: 3px solid var(--tk-background-color-container);
             box-shadow: var(--tk-shadow-both);
             background-color: var(--tk-background-color-container);
+            z-index: 999;
 
             img{
                 width: 90%;
