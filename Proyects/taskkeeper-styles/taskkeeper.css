@@ -131,5 +131,16 @@ main {
 }
 
 /*Media Queries ----------------------------------*/
+@media screen and (max-width: 768px) {
+  .tk__section_menu .tk__section_menu__container {
+    width: 230px;
+  }
+  .tk__section_menu .tk__section_menu__container .tk__note__priority,
+  .tk__section_menu .tk__section_menu__container #tk__btn__tasks,
+  .tk__section_menu .tk__section_menu__container #tk__btn__new__note,
+  .tk__section_menu .tk__section_menu__container .tk__tools {
+    font-size: 16px;
+  }
+}
 
 /*# sourceMappingURL=taskkeeper.css.map */

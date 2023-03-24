@@ -1,4 +1,4 @@
-.tk__section_menu{
+.tk__section_menu {
     height: 100%;
 
     .tk__section_menu__container {
@@ -11,7 +11,7 @@
         padding: 30px;
         background-color: var(--tk-background-color-container);
         box-shadow: 10px 0px 20px var(--tk-shadow-dark);
-    
+
         .tk__logo__container {
             display: flex;
             justify-content: center;
@@ -22,36 +22,36 @@
             border-radius: 50%;
             border: 5px solid var(--tk-background-color-container);
             box-shadow: var(--tk-shadow-container);
-    
+
             img {
                 width: 60px;
             }
         }
-    
+
         .tk__ideas__priority__container {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-    
+
             h2 {
                 margin-top: 20px;
                 font-style: italic;
             }
-    
+
             img {
                 width: 25px;
             }
-    
+
             .tk__note__priority {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 cursor: pointer;
                 transition: transform .4s ease;
-    
+
             }
         }
-    
+
         .tk__ideas__priority__container button,
         .tk__tools__container button {
             display: flex;
@@ -64,29 +64,29 @@
             background-color: var(--background-color-container);
             transition: transform .4s ease;
         }
-    
+
         .tk__note__priority:hover,
         button:hover,
         .tk__tools:hover {
             font-weight: 600;
             transform: scale(1.06, 1.06);
         }
-    
-    
+
+
         .tk__tools__container {
             width: 100%;
-    
+
             .tk__tools {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 cursor: pointer;
                 transition: transform .4s ease;
-    
+
                 img {
                     width: 25px;
                 }
-    
+
             }
         }
     }
@@ -94,6 +94,20 @@
 
 /*Media Queries ----------------------------------*/
 
-@media screen and (max-width: 1024px){
-    
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+    .tk__section_menu {
+
+        .tk__section_menu__container {
+            width: 230px;
+
+            .tk__note__priority,
+            #tk__btn__tasks,
+            #tk__btn__new__note,
+            .tk__tools{
+                font-size: 16px;
+            }
+        }
+    }
 }
