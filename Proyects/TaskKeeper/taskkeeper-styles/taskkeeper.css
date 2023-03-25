@@ -461,6 +461,7 @@ main section .tk__line__between {
   }
   .tk__section__user__info {
     transform: translateX(100%);
+    transition: transform 0.5s ease;
   }
   main .tk__icono__user__info__container {
     display: flex;
