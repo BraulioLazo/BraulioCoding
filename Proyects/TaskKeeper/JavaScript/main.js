@@ -2,6 +2,7 @@ const levelAdvanced = 50;
 const levelPro = 280;
 
 function startTaskKeeper() {
+  startDataBase();
   deployChangeName();
   generateUserName();
   changeUserName();
