@@ -28,6 +28,7 @@ function showError(event) {
 
 function start(event) {
     db = event.target.result;
+    showNotes();
 }
 
 function createStorage(event) {
