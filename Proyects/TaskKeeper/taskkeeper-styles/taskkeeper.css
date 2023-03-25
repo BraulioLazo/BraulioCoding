@@ -26,6 +26,29 @@ main {
   overflow: hidden;
 }
 
+input,
+#ik__note__form textarea {
+  border: none;
+  outline: none;
+  background-color: var(--tk-background-color-container);
+}
+
+input {
+  padding: 10px 40px;
+  border-radius: var(--tk-radius-circular);
+  box-shadow: var(--tk-shadow-inside);
+  background-color: var(--tk-background-color-container);
+  transition: box-shadow 0.4s ease;
+}
+
+input:hover {
+  box-shadow: var(--tk-shadow-outside);
+}
+
+input:focus {
+  box-shadow: var(--tk-shadow-outside);
+}
+
 :root {
   /*  Task Keeper Custom Properties -----------------------*/
   --tk-shadow-dark: #b9c1ccda;
@@ -373,6 +396,9 @@ main .tk__icono__user__info__container {
   width: 200px;
   padding: 10px;
   text-align: center;
+}
+.tk__section__user__info .tk__user__container .container__input__change__name input#input__change__name:hover {
+  box-shadow: var(--tk-shadow-inside);
 }
 .tk__section__user__info .tk__user__container div.deploy__change__name {
   height: 65px;

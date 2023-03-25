@@ -369,6 +369,9 @@ main .tk__icono__user__info__container {
                 padding: 10px;
                 text-align: center;
             }
+            input#input__change__name:hover{
+                box-shadow: var(--tk-shadow-inside);
+            }
         }
 
         div.deploy__change__name {

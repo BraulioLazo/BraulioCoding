@@ -25,3 +25,27 @@ main{
     overflow: hidden;
 }
 
+input,
+#ik__note__form textarea {
+    border: none;
+    outline: none;
+    background-color: var(--tk-background-color-container);
+}
+
+input {
+    padding: 10px 40px;
+    border-radius: var(--tk-radius-circular);
+    box-shadow: var(--tk-shadow-inside);
+    background-color: var(--tk-background-color-container);
+    transition: box-shadow .4s ease;
+}
+
+input:hover {
+    box-shadow: var(--tk-shadow-outside);
+}
+
+input:focus {
+    box-shadow: var(--tk-shadow-outside);
+}
+
+
