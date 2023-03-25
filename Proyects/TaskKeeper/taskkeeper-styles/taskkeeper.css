@@ -320,7 +320,7 @@ main .tk__icono__user__info__container {
   display: none;
 }
 
-.tk__section__user__info__container {
+.tk__section__user__info {
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -330,11 +330,11 @@ main .tk__icono__user__info__container {
   background-color: var(--tk-background-color-container);
   box-shadow: -10px 0px 20px var(--tk-shadow-dark);
 }
-.tk__section__user__info__container .tk__user__container {
+.tk__section__user__info .tk__user__container {
   margin: 0 auto;
   text-align: center;
 }
-.tk__section__user__info__container .tk__user__container .tk__user__logo {
+.tk__section__user__info .tk__user__container .tk__user__logo {
   position: relative;
   width: 120px;
   height: 120px;
@@ -344,14 +344,14 @@ main .tk__icono__user__info__container {
   box-shadow: var(--tk-shadow-both);
   cursor: pointer;
 }
-.tk__section__user__info__container .tk__user__container .tk__user__logo img {
+.tk__section__user__info .tk__user__container .tk__user__logo img {
   position: absolute;
   left: -4px;
   bottom: 5px;
   width: 120px;
   margin-bottom: 20px;
 }
-.tk__section__user__info__container .tk__user__container .tk__level__container {
+.tk__section__user__info .tk__user__container .tk__level__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,44 +359,44 @@ main .tk__icono__user__info__container {
   padding: 10px 0;
   font-weight: 600;
 }
-.tk__section__user__info__container .tk__user__container .tk__level__container img {
+.tk__section__user__info .tk__user__container .tk__level__container img {
   width: 20px;
 }
-.tk__section__user__info__container .tk__user__container .container__input__change__name {
+.tk__section__user__info .tk__user__container .container__input__change__name {
   height: 0px;
   overflow: hidden;
 }
-.tk__section__user__info__container .tk__user__container .container__input__change__name input {
+.tk__section__user__info .tk__user__container .container__input__change__name input {
   width: 200px;
   padding: 10px;
   text-align: center;
 }
-.tk__section__user__info__container .tk__user__container .deploy__change__name {
+.tk__section__user__info .tk__user__container .deploy__change__name {
   height: 65px;
   padding: 20px 5px 5px 5px;
 }
-.tk__section__user__info__container .tk__task__information__container {
+.tk__section__user__info .tk__task__information__container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-top: 40px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container h2 {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container h2 {
   font-size: 25px;
   font-style: italic;
   text-align: center;
   margin-top: -30px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container p {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container p {
   font-size: 15px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
   width: 180px;
   height: 180px;
   margin: 0 auto;
@@ -406,15 +406,15 @@ main .tk__icono__user__info__container {
   border: 5px solid var(--tk-background-color-container);
   box-shadow: var(--tk-shadow-container);
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
   width: 100%;
   height: 100%;
   padding: 10px;
   border-radius: 50%;
   background-image: conic-gradient(#0089DC, 0deg, var(--tk-background-color-container) 0deg);
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,21 +428,21 @@ main .tk__icono__user__info__container {
   text-align: center;
   font-style: italic;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
   width: 100%;
   font-size: 35px;
   margin-top: -15px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level p {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level p {
   font-weight: 600;
 }
-.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level img {
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level img {
   width: 20px;
 }
 
@@ -459,7 +459,7 @@ main section .tk__line__between {
   #tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
     display: none;
   }
-  .tk__section__user__info__container {
+  .tk__section__user__info {
     transform: translateX(100%);
   }
   main .tk__icono__user__info__container {

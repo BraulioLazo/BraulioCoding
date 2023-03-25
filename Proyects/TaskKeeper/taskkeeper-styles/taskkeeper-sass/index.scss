@@ -316,7 +316,7 @@ main .tk__icono__user__info__container {
     display: none;
 }
 
-.tk__section__user__info__container {
+.tk__section__user__info {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -489,7 +489,7 @@ main section .tk__line__between {
         }
     }
 
-    .tk__section__user__info__container {
+    .tk__section__user__info {
         transform: translateX(100%);
     }
 
