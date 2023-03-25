@@ -1,5 +1,5 @@
-main{
-    .tk__icono__menu__container{
+main {
+    .tk__icono__menu__container {
         display: none;
     }
 }
@@ -98,17 +98,241 @@ main{
     }
 }
 
-section.deploy__menu{
+section.deploy__menu {
     transform: translateX(0%);
+}
+
+/* Section Notes ---------------------------------------------------------------*/
+
+#tk__section__notes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    overflow-y: auto;
+
+    .tk__section__notes__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px;
+        width: 100%;
+        height: 100%;
+
+
+        .tk__section__notes__header__container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+
+            .tk__section__notes__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: var(--tk-background-color-container);
+                border-radius: var(--tk-radius-main);
+                box-shadow: -10px -10px 20px var(--tk-shadow-ligth),
+                    10px 10px 20px var(--tk-shadow-dark);
+
+                .tk__section__notes__container__text {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 12px;
+
+                    h1 {
+                        width: 100%;
+                        font-size: 30px;
+                        font-style: italic;
+                    }
+
+                    p{
+                        max-width: 550px;
+                    }
+                }
+
+                .tk__ideas__keeper__image__container {
+                    width: 150px;
+                    margin-top: 20px;
+                    margin-right: 30px;
+                    margin-bottom: -80px;
+                    border-radius: 12px;
+                    box-shadow: var(--tk-shadow-container-outside);
+                    transform: rotateZ(25deg);
+
+                    img {
+                        width: 100%;
+                        margin-top: -12px;
+                        margin-bottom: -4px;
+                        transform: scale(1.02, 1.02);
+                    }
+                }
+
+            }
+
+        }
+
+        .tk__section__notes__container__notes {
+            display: flex;
+            justify-content: center;
+            align-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 30px 30px;
+
+            .tk__note__container {
+                position: relative;
+                display: flex;
+                align-items: baseline;
+                flex-wrap: wrap;
+                gap: 10px;
+                max-width: 350px;
+                padding: 20px;
+                border-radius: var(--tk-radius-main);
+                background-color: var(--tk-background-color-container);
+                box-shadow: -10px -10px 20px var(--tk-shadow-ligth),
+                    10px 10px 20px var(--tk-shadow-dark);
+
+                .tk__note__menu__container {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+
+                    .tk__note__menu__image {
+                        position: absolute;
+                        top: 12px;
+                        right: 12px;
+                        width: 20px;
+                        z-index: 1;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .tk__note__menu__container__button__image {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        flex-wrap: wrap;
+                        gap: 5px;
+                        width: 0px;
+                        height: 0px;
+                        padding: 0px;
+                        border-radius: 8px;
+                        background-color: var(--tk-background-color-container);
+                        overflow: hidden;
+
+                        button {
+                            width: 100%;
+                            border: none;
+                            text-align: left;
+                            font-size: 16px;
+                            background-color: transparent;
+                            cursor: pointer;
+                            transition: transform .4s ease;
+                        }
+
+                        button:hover {
+                            transform: scale(1.1, 1.1);
+                            font-weight: 600;
+                        }
+                    }
+
+                    .deploy__note__menu {
+                        width: 120px;
+                        height: 65px;
+                        padding: 0 12px;
+                        box-shadow: var(--tk-shadow-outside);
+                    }
+                }
+
+                .deploy__container__note__menu {
+                    left: 0px;
+                    bottom: 0px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--tk-radius-main);
+                    backdrop-filter: blur(8px);
+                }
+
+                .ik__container__title {
+                    width: 100%;
+                    font-style: italic;
+                    font-weight: 700;
+                }
+
+                .ik__note__pririty__done__container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .ik__p__priority {
+                        padding: 6px 20px;
+                        border-radius: var(--tk-radius-circular);
+                        background-color: rgb(250, 171, 0);
+                        font-style: italic;
+                    }
+
+                    .ik__work__done {
+                        border: none;
+                        outline: none;
+                        padding: 8px 20px;
+                        font-style: italic;
+                        font-weight: 600;
+                        border-radius: var(--tk-radius-circular);
+                        box-shadow: var(--tk-shadow-inside);
+                        cursor: pointer;
+                        transition: box-shadow .5s ease;
+                    }
+
+                    .ik__work__done:hover {
+                        box-shadow: var(--tk-shadow-outside);
+                    }
+
+                }
+            }
+        }
+
+
+    }
 }
 
 /*Media Queries ----------------------------------*/
 
 @media screen and (max-width: 1024px) {}
 
+@media screen and (max-width: 900px) {
+    #tk__section__notes {
+
+        .tk__section__notes__container {
+
+            .tk__section__notes__header__container {
+
+                .tk__section__notes__header {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+
 @media screen and (max-width: 768px) {
-    main{
-        .tk__icono__menu__container{
+    main {
+        .tk__icono__menu__container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -125,11 +349,12 @@ section.deploy__menu{
             background-color: var(--tk-background-color-container);
             z-index: 999;
 
-            img{
+            img {
                 width: 90%;
             }
         }
     }
+
     .tk__section_menu {
         transform: translateX(-100%);
         transition: transform .5s ease;
@@ -140,7 +365,7 @@ section.deploy__menu{
             .tk__note__priority,
             #tk__btn__tasks,
             #tk__btn__new__note,
-            .tk__tools{
+            .tk__tools {
                 font-size: 16px;
             }
         }
