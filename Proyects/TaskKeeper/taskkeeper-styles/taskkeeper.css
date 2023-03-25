@@ -11,8 +11,9 @@
 body {
   display: flex;
   height: 100vh;
-  min-height: 700px;
+  min-height: 850px;
   background-color: var(--tk-background-color-main);
+  overflow-x: hidden;
 }
 
 main {
@@ -314,7 +315,150 @@ section.deploy__menu {
   box-shadow: var(--tk-shadow-outside);
 }
 
+/* Section USER INFO -----------------------------------------------------------*/
+.tk__section__user__info__container {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  background-color: var(--tk-background-color-container);
+  box-shadow: -10px 0px 20px var(--tk-shadow-dark);
+}
+.tk__section__user__info__container .tk__user__container {
+  margin: 0 auto;
+  text-align: center;
+}
+.tk__section__user__info__container .tk__user__container .tk__user__logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 40px auto 20px auto;
+  border-radius: 50%;
+  border: 4px solid var(--tk-background-color-container);
+  box-shadow: var(--tk-shadow-both);
+  cursor: pointer;
+}
+.tk__section__user__info__container .tk__user__container .tk__user__logo img {
+  position: absolute;
+  left: -4px;
+  bottom: 5px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+.tk__section__user__info__container .tk__user__container .tk__level__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-weight: 600;
+}
+.tk__section__user__info__container .tk__user__container .tk__level__container img {
+  width: 20px;
+}
+.tk__section__user__info__container .tk__user__container .container__input__change__name {
+  height: 0px;
+  overflow: hidden;
+}
+.tk__section__user__info__container .tk__user__container .container__input__change__name input {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+.tk__section__user__info__container .tk__user__container .deploy__change__name {
+  height: 65px;
+  padding: 20px 5px 5px 5px;
+}
+.tk__section__user__info__container .tk__task__information__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container h2 {
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  margin-top: -30px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container p {
+  font-size: 15px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--tk-background-color-container);
+  border: 5px solid var(--tk-background-color-container);
+  box-shadow: var(--tk-shadow-container);
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 50%;
+  background-image: conic-gradient(#0089DC, 0deg, var(--tk-background-color-container) 0deg);
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px var(--tk-shadow-dark), -2px -2px 4px var(--tk-shadow-dark);
+  background-color: var(--tk-background-color-container);
+  text-align: center;
+  font-style: italic;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
+  width: 100%;
+  font-size: 35px;
+  margin-top: -15px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level p {
+  font-weight: 600;
+}
+.tk__section__user__info__container .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__text__next__level img {
+  width: 20px;
+}
+
+main section .tk__line__between {
+  width: 100%;
+  height: 4px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: var(--tk-shadow-outside);
+}
+
 /*Media Queries ----------------------------------*/
+@media screen and (max-width: 1150px) {
+  #tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
+    display: none;
+  }
+  .tk__section__user__info__container {
+    transform: translateX(100%);
+  }
+}
 @media screen and (max-width: 768px) {
   main .tk__icono__menu__container {
     display: flex;
@@ -348,9 +492,6 @@ section.deploy__menu {
   .tk__section_menu .tk__section_menu__container #tk__btn__new__note,
   .tk__section_menu .tk__section_menu__container .tk__tools {
     font-size: 16px;
-  }
-  #tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
-    display: none;
   }
 }
 

@@ -10,8 +10,9 @@
 body{
     display: flex;
     height: 100vh;
-    min-height: 700px;
+    min-height: 850px;
     background-color: var(--tk-background-color-main);
+    overflow-x: hidden;
 }
 
 main{
