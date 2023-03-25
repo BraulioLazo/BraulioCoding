@@ -12,7 +12,6 @@ body {
   position: relative;
   display: flex;
   width: 100%;
-  height: 100vh;
   min-height: 850px;
   background-color: var(--tk-background-color-main);
 }
@@ -27,7 +26,7 @@ main {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
