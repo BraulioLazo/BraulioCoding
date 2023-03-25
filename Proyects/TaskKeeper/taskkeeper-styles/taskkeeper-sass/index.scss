@@ -369,7 +369,8 @@ main .tk__icono__user__info__container {
                 padding: 10px;
                 text-align: center;
             }
-            input#input__change__name:hover{
+
+            input#input__change__name:hover {
                 box-shadow: var(--tk-shadow-inside);
             }
         }
@@ -475,6 +476,105 @@ main section .tk__line__between {
     box-shadow: var(--tk-shadow-outside);
 }
 
+
+/*Section Form ADD NOTE---------------------------*/
+.tk__section__note__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    z-index: 1;
+
+    .tk__section__note__form__container {
+        padding: 30px;
+        border-radius: var(--tk-radius-main);
+        border: 5px solid var(--tk-background-color-container);
+        box-shadow: var(--tk-shadow-container);
+        background-color: var(--tk-background-color-container);
+
+        .tk__form__btn__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        #tk__note__form {
+            #tk__close__form {
+                border: 5px solid var(--tk-background-color-container);
+                box-shadow: var(--tk-shadow-inside);
+            }
+
+            textarea {
+                max-width: 600px;
+                min-width: 600px;
+                min-height: 200px;
+                margin: 20px 0;
+                padding: 20px;
+                border-radius: var(--tk-radius-main);
+                box-shadow: var(--tk-shadow-outside);
+            }
+
+            #tk__select__priority {
+                padding: 10px 20px;
+                font-size: 22px;
+                font-style: italic;
+                font-weight: 400;
+                border: none;
+                outline: none;
+                border-radius: var(--tk-radius-circular);
+                background-color: var(--tk-background-color-container);
+                cursor: pointer;
+                transition: box-shadow .5s ease;
+                box-shadow: var(--tk-shadow-outside);
+            }
+
+            #btn__keepnote,
+            #btn__updatenote {
+                border: 5px solid var(--tk-background-color-container);
+                box-shadow: var(--tk-shadow-inside);
+            }
+
+            #btn__keepnote:hover,
+            #tk__close__form:hover,
+            #btn__updatenote:hover {
+                box-shadow: var(--tk-shadow-both);
+            }
+        }
+    }
+}
+
+
+.tk__btn {
+    padding: 10px 20px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: var(--tk-radius-circular);
+    background-color: var(--background-color-container);
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+    box-shadow: var(--tk-shadow-inside);
+}
+
+section.deploy__form {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
 /*Media Queries ----------------------------------*/
 @media screen and (max-width: 1150px) {
     main .tk__section__notes {
@@ -530,9 +630,10 @@ main section .tk__line__between {
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 768px) {
-    body{
+    body {
         min-height: 700px;
     }
+
     main {
         .tk__icono__menu__container {
             display: flex;
@@ -581,71 +682,84 @@ main section .tk__line__between {
         width: 230px;
         align-items: center;
         align-content: center;
-    
+
         .tk__user__container {
-    
+
             .tk__user__logo {
                 position: relative;
                 width: 100px;
                 height: 100px;
                 margin: 30px auto 20px auto;
-    
+
                 img {
                     width: 100px;
                 }
             }
-    
+
             .tk__level__container {
-    
+
                 img {
                     width: 20px;
                 }
             }
-    
+
             .container__input__change__name {
-    
+
                 input {
                     width: 180px;
                     font-size: 16px;
                 }
             }
         }
-    
+
         .tk__task__information__container {
             padding-top: 30px;
-    
+
             .tk__progress__bars__container {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 30px;
-    
+
                 h2 {
                     font-size: 25px;
                     font-style: italic;
                     text-align: center;
                     margin-top: -30px;
                 }
-    
+
                 p {
                     font-size: 15px;
                 }
 
-                .tk__progress__bar__today__container{
+                .tk__progress__bar__today__container {
                     width: 160px;
                     height: 160px;
                 }
-    
+
                 .tk__progress__bar__today,
                 .tk__progress__bar__next__level {
                     padding: 8px;
                 }
-    
+
                 .tk__progress__bar__porcent,
                 .tk__progress__bar__porcent__next__level {
                     width: 100%;
                     font-size: 30px;
                     margin-top: -15px;
                 }
+            }
+        }
+    }
+
+    /* Section NOTE FORM ------------*/
+    .tk__section__note__form {
+       
+        .tk__section__note__form__container {
+            width: 100%;
+
+            textarea#tk__note__area {
+                max-width: 100%;
+                min-width: 300px;
             }
         }
     }
