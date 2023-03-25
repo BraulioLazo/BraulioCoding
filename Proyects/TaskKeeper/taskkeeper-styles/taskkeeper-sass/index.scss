@@ -265,26 +265,26 @@ main .tk__section__notes {
                     backdrop-filter: blur(8px);
                 }
 
-                .ik__container__title {
+                .tk__container__title {
                     width: 100%;
                     font-style: italic;
                     font-weight: 700;
                 }
 
-                .ik__note__pririty__done__container {
+                .tk__note__pririty__done__container {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
 
-                    .ik__p__priority {
+                    .tk__p__priority {
                         padding: 6px 20px;
                         border-radius: var(--tk-radius-circular);
                         background-color: rgb(250, 171, 0);
                         font-style: italic;
                     }
 
-                    .ik__work__done {
+                    .tk__work__done {
                         border: none;
                         outline: none;
                         padding: 8px 20px;
@@ -296,7 +296,7 @@ main .tk__section__notes {
                         transition: box-shadow .5s ease;
                     }
 
-                    .ik__work__done:hover {
+                    .tk__work__done:hover {
                         box-shadow: var(--tk-shadow-outside);
                     }
 

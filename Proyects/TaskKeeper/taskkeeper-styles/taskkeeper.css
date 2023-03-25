@@ -314,24 +314,24 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   border-radius: var(--tk-radius-main);
   backdrop-filter: blur(8px);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .ik__container__title {
+main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__container__title {
   width: 100%;
   font-style: italic;
   font-weight: 700;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .ik__note__pririty__done__container {
+main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .ik__note__pririty__done__container .ik__p__priority {
+main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__p__priority {
   padding: 6px 20px;
   border-radius: var(--tk-radius-circular);
   background-color: rgb(250, 171, 0);
   font-style: italic;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .ik__note__pririty__done__container .ik__work__done {
+main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done {
   border: none;
   outline: none;
   padding: 8px 20px;
@@ -342,7 +342,7 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   cursor: pointer;
   transition: box-shadow 0.5s ease;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .ik__note__pririty__done__container .ik__work__done:hover {
+main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done:hover {
   box-shadow: var(--tk-shadow-outside);
 }
 
