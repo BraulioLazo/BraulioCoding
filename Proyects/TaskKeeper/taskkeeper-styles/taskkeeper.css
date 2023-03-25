@@ -574,6 +574,7 @@ section.deploy__form {
   width: 100%;
   height: 100%;
   padding: 20px;
+  z-index: 999;
 }
 
 /*Media Queries ----------------------------------*/
@@ -636,6 +637,9 @@ section.deploy__form {
   }
   main .tk__icono__menu__container img {
     width: 90%;
+  }
+  .tk__btn {
+    font-size: 18px;
   }
   .tk__section_menu {
     position: absolute;
@@ -728,8 +732,12 @@ section.deploy__form {
     justify-content: space-between;
   }
   .tk__section__note__form .tk__section__note__form__container #tk__note__form textarea#tk__note__area {
+    max-width: 800px;
     width: 100%;
     min-width: 300px;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form #tk__select__priority {
+    font-size: 18px;
   }
 }
 
