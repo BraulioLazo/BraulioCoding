@@ -316,6 +316,10 @@ section.deploy__menu {
 }
 
 /* Section USER INFO -----------------------------------------------------------*/
+.tk__icono__user__info__container {
+  display: none;
+}
+
 .tk__section__user__info__container {
   display: flex;
   align-content: flex-start;
@@ -458,6 +462,27 @@ main section .tk__line__between {
   .tk__section__user__info__container {
     transform: translateX(100%);
   }
+  .tk__icono__user__info__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid var(--tk-background-color-container);
+    box-shadow: var(--tk-shadow-both);
+    background-color: var(--tk-background-color-container);
+    z-index: 999;
+  }
+  .tk__icono__user__info__container img {
+    width: 40px;
+    margin-top: -20px;
+  }
 }
 @media screen and (max-width: 768px) {
   main .tk__icono__menu__container {
@@ -466,8 +491,8 @@ main section .tk__line__between {
     align-items: center;
     align-content: center;
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     width: 40px;
     height: 40px;
     padding: 5px;
