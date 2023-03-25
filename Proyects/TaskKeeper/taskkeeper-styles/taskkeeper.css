@@ -15,10 +15,16 @@ body {
   height: 100vh;
   min-height: 850px;
   background-color: var(--tk-background-color-main);
-  overflow-x: hidden;
+  overflow: hidden;
+  border: 2px solid blue;
 }
 
 main {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   display: flex;
   justify-content: space-between;
   width: 100%;
