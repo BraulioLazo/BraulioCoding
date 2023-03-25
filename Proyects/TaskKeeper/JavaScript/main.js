@@ -1,8 +1,12 @@
+const levelAdvanced = 50;
+const levelPro = 280;
+
 function startTaskKeeper() {
   deployChangeName();
   generateUserName();
   changeUserName();
   deployMenu();
+  updateUserLevel();
 }
 window.addEventListener("load", startTaskKeeper);
 
@@ -48,4 +52,35 @@ function deployMenu() {
     const sectionUserInfo = document.querySelector(".tk__section__user__info");
     sectionUserInfo.classList.toggle("deploy__menu");
   });
+}
+
+function updateUserLevel() {
+  const levelContainer = document.querySelector(".tk__level__container");
+  if (localStorage.getItem("taskDoneCounter")) {
+
+      const taskDone = parseInt(localStorage.getItem("taskDoneCounter"));
+
+      if (taskDone < levelAdvanced) {
+          localStorage.setItem("UserLevel", "Amateur");
+          levelContainer.innerHTML = '<img src="images/amateur__crown__image.webp">' +
+              localStorage.getItem("UserLevel") +
+              '<img src="images/amateur__crown__image.webp">';
+      } else if (taskDone >= levelAdvanced && taskDone < levelPro) {
+          localStorage.setItem("UserLevel", "Advanced");
+          levelContainer.innerHTML = '<img src="images/advanced__crown__image.webp">' +
+              localStorage.getItem("UserLevel") +
+              '<img src="images/advanced__crown__image.webp">';
+      } else if (taskDone >= levelPro) {
+          localStorage.setItem("UserLevel", "Pro");
+          levelContainer.innerHTML = '<img src="images/pro__crown__image.webp">' +
+              localStorage.getItem("UserLevel") +
+              '<img src="images/pro__crown__image.webp">';
+      }
+  } else {
+      localStorage.setItem("UserLevel", "Amateur");
+      levelContainer.innerHTML = '<img src="images/amateur__crown__image.webp">' +
+          localStorage.getItem("UserLevel") +
+          '<img src="images/amateur__crown__image.webp">';
+  }
+
 }
