@@ -1,4 +1,5 @@
 function startTaskKeeper() {
+  deployChangeName();
   deployMenu();
 }
 window.addEventListener("load", startTaskKeeper);
@@ -14,5 +15,13 @@ function deployMenu() {
   iconUserInfo.addEventListener("click", () => {
     const sectionUserInfo = document.querySelector(".tk__section__user__info");
     sectionUserInfo.classList.toggle("deploy__menu");
+  });
+}
+
+function deployChangeName() {
+  const userLogo = document.querySelector(".tk__user__logo");
+  userLogo.addEventListener("click", () => {
+    const containerChangeName = document.querySelector(".container__input__change__name");
+    containerChangeName.classList.toggle("deploy__change__name");
   });
 }
