@@ -9,6 +9,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -17,6 +18,12 @@ body {
 }
 
 main {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -464,7 +471,7 @@ main section .tk__line__between {
     display: none;
   }
   .tk__section__user__info {
-    position: fixed;
+    position: absolute;
     top: 0px;
     right: 0px;
     transform: translateX(100%);
@@ -514,7 +521,7 @@ main section .tk__line__between {
     width: 90%;
   }
   .tk__section_menu {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     transform: translateX(-100%);
