@@ -530,6 +530,13 @@ main section .tk__line__between {
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 768px) {
+    body{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
     main {
         .tk__icono__menu__container {
             display: flex;
