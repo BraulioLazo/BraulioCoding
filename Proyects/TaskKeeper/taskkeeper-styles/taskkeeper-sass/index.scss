@@ -532,6 +532,7 @@ main section .tk__line__between {
 @media screen and (max-width: 768px) {
     body{
         min-height: 700px;
+        border: 2px solid red;
     }
     main {
         .tk__icono__menu__container {
