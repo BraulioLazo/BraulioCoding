@@ -753,14 +753,37 @@ section.deploy__form {
 
     /* Section NOTE FORM ------------*/
     .tk__section__note__form {
-       
+
         .tk__section__note__form__container {
             width: 100%;
 
-            textarea#tk__note__area {
-                max-width: 100%;
-                min-width: 300px;
+            #tk__note__form {
+                justify-content: space-between;
+                .tk__form__btn__container {
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+
+                    input#tk__input__title {
+                        width: 100%;
+                        order: 2;
+                    }
+
+                    #tk__close__form {
+                        margin-bottom: 15px;
+                    }
+
+                }
+
+                .tk__form__btn__container__two{
+                    justify-content: space-between;
+                }
+
+                textarea#tk__note__area {
+                    width: 100%;
+                    min-width: 300px;
+                }
             }
         }
+
     }
 }

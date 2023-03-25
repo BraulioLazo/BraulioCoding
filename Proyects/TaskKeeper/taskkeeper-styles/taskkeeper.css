@@ -710,8 +710,25 @@ section.deploy__form {
   .tk__section__note__form .tk__section__note__form__container {
     width: 100%;
   }
-  .tk__section__note__form .tk__section__note__form__container textarea#tk__note__area {
-    max-width: 100%;
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form {
+    justify-content: space-between;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container input#tk__input__title {
+    width: 100%;
+    order: 2;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container #tk__close__form {
+    margin-bottom: 15px;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container__two {
+    justify-content: space-between;
+  }
+  .tk__section__note__form .tk__section__note__form__container #tk__note__form textarea#tk__note__area {
+    width: 100%;
     min-width: 300px;
   }
 }
