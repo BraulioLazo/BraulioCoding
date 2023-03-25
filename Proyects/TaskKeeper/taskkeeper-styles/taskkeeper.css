@@ -316,7 +316,7 @@ section.deploy__menu {
 }
 
 /* Section USER INFO -----------------------------------------------------------*/
-.tk__icono__user__info__container {
+main .tk__icono__user__info__container {
   display: none;
 }
 
@@ -462,7 +462,7 @@ main section .tk__line__between {
   .tk__section__user__info__container {
     transform: translateX(100%);
   }
-  .tk__icono__user__info__container {
+  main .tk__icono__user__info__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -479,7 +479,7 @@ main section .tk__line__between {
     background-color: var(--tk-background-color-container);
     z-index: 999;
   }
-  .tk__icono__user__info__container img {
+  main .tk__icono__user__info__container img {
     width: 40px;
     margin-top: -20px;
   }
