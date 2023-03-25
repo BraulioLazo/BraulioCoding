@@ -90,6 +90,7 @@ main .tk__icono__menu__container {
 
 .tk__section_menu {
   height: 100%;
+  z-index: 998;
 }
 .tk__section_menu .tk__section_menu__container {
   position: relative;
@@ -360,6 +361,7 @@ main .tk__icono__user__info__container {
   padding: 20px;
   background-color: var(--tk-background-color-container);
   box-shadow: -10px 0px 20px var(--tk-shadow-dark);
+  z-index: 998;
 }
 .tk__section__user__info .tk__user__container {
   margin: 0 auto;
@@ -657,88 +659,102 @@ section.deploy__form {
   .tk__section_menu .tk__section_menu__container .tk__tools {
     font-size: 16px;
   }
-  /* Section USER INFO ------------*/
-  .tk__section__user__info {
-    width: 230px;
-    align-items: center;
-    align-content: center;
-  }
-  .tk__section__user__info .tk__user__container .tk__user__logo {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 30px auto 20px auto;
-  }
-  .tk__section__user__info .tk__user__container .tk__user__logo img {
-    width: 100px;
-  }
-  .tk__section__user__info .tk__user__container .tk__level__container img {
-    width: 20px;
-  }
-  .tk__section__user__info .tk__user__container .container__input__change__name input {
-    width: 180px;
-    font-size: 16px;
-  }
-  .tk__section__user__info .tk__task__information__container {
-    padding-top: 30px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container {
+  /* Section NOTES ----------------*/
+  main .tk__section__notes {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container h2 {
-    font-size: 25px;
-    font-style: italic;
-    text-align: center;
-    margin-top: -30px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container p {
-    font-size: 15px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
-    width: 160px;
-    height: 160px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
-    padding: 8px;
-  }
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
-  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     width: 100%;
-    font-size: 30px;
-    margin-top: -15px;
+    height: 100%;
   }
-  /* Section NOTE FORM ------------*/
-  .tk__section__note__form .tk__section__note__form__container {
-    width: 100%;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form {
-    justify-content: space-between;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container {
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container input#tk__input__title {
-    width: 100%;
-    order: 2;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container #tk__close__form {
-    margin-bottom: 15px;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container__two {
-    justify-content: space-between;
-  }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form textarea#tk__note__area {
+  main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container {
     max-width: 800px;
     width: 100%;
-    min-width: 300px;
   }
-  .tk__section__note__form .tk__section__note__form__container #tk__note__form #tk__select__priority {
-    font-size: 18px;
-  }
+}
+/* Section USER INFO ------------*/
+.tk__section__user__info {
+  width: 230px;
+  align-items: center;
+  align-content: center;
+}
+.tk__section__user__info .tk__user__container .tk__user__logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 30px auto 20px auto;
+}
+.tk__section__user__info .tk__user__container .tk__user__logo img {
+  width: 100px;
+}
+.tk__section__user__info .tk__user__container .tk__level__container img {
+  width: 20px;
+}
+.tk__section__user__info .tk__user__container .container__input__change__name input {
+  width: 180px;
+  font-size: 16px;
+}
+.tk__section__user__info .tk__task__information__container {
+  padding-top: 30px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container h2 {
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  margin-top: -30px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container p {
+  font-size: 15px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
+  width: 160px;
+  height: 160px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
+  padding: 8px;
+}
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
+.tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
+  width: 100%;
+  font-size: 30px;
+  margin-top: -15px;
+}
+
+/* Section NOTE FORM ------------*/
+.tk__section__note__form .tk__section__note__form__container {
+  width: 100%;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form {
+  justify-content: space-between;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container input#tk__input__title {
+  width: 100%;
+  order: 2;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container #tk__close__form {
+  margin-bottom: 15px;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form .tk__form__btn__container__two {
+  justify-content: space-between;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form textarea#tk__note__area {
+  max-width: 800px;
+  width: 100%;
+  min-width: 300px;
+}
+.tk__section__note__form .tk__section__note__form__container #tk__note__form #tk__select__priority {
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=taskkeeper.css.map */
