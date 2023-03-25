@@ -8,6 +8,7 @@ function startTaskKeeper() {
   changeUserName();
   deployMenu();
   updateUserLevel();
+  resetProgram();
 }
 window.addEventListener("load", startTaskKeeper);
 
@@ -84,4 +85,11 @@ function updateUserLevel() {
           '<img src="images/amateur__crown__image.webp">';
   }
 
+}
+
+function resetProgram(){
+  document.querySelector(".tk__tools").addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+  })
 }
