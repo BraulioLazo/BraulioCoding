@@ -528,7 +528,6 @@ main section .tk__line__between {
 @media screen and (max-width: 768px) {
   body {
     min-height: 700px;
-    border: 2px solid red;
   }
   main .tk__icono__menu__container {
     display: flex;
@@ -567,6 +566,11 @@ main section .tk__line__between {
     font-size: 16px;
   }
   /* Section USER INFO ------------*/
+  .tk__section__user__info {
+    width: 230px;
+    align-items: center;
+    align-content: center;
+  }
   .tk__section__user__info .tk__user__container .tk__user__logo {
     position: relative;
     width: 100px;
@@ -599,6 +603,10 @@ main section .tk__line__between {
   }
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container p {
     font-size: 15px;
+  }
+  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
+    width: 160px;
+    height: 160px;
   }
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
