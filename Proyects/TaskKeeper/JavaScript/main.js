@@ -9,7 +9,7 @@ function startTaskKeeper() {
   deployMenu();
   updateUserLevel();
   resetProgram();
-  
+
   const btnNewTask = document.querySelector("#tk__btn__new__note");
   btnNewTask.addEventListener("click", () => {
     deployNoteForm();
@@ -109,7 +109,12 @@ function resetProgram() {
 
 function deployNoteForm() {
   const sectionNoteForm = document.querySelector(".tk__section__note__form");
-  sectionNoteForm.classList.toggle("deploy__form");
+  if (sectionNoteForm.classList.contains("deploy__form")) {
+    sectionNoteForm.classList.remove("deploy__form");
+  } else {
+    sectionNoteForm.classList.add("deploy__form");
+
+  }
 }
 
 function addNoteCloseForm() {
@@ -119,24 +124,24 @@ function addNoteCloseForm() {
 
 function beforeShowNotes() {
   if (lastPrioritySearch === null) {
-      showNotes();
+    showNotes();
   } else {
-      lastSearch();
+    lastSearch();
   }
 }
 
 function priorityColors() {
   workPriority = document.querySelectorAll(".tk__p__priority");
   workPriority.forEach(function (element) {
-      if (element.innerHTML === "Alta") {
-          element.style.backgroundColor = "#f22f7033";
-      } else if (element.innerHTML === "Media") {
-          element.style.backgroundColor = "rgba(1, 255, 1, 0.3)";
-          element.style.color = "rgba(1, 148, 1)";
-      } else if (element.innerHTML === "Baja") {
-          element.style.backgroundColor = "rgba(230, 255, 3, 0.3)";
-          element.style.color = "rgb(250, 171, 0)";
-      }
+    if (element.innerHTML === "Alta") {
+      element.style.backgroundColor = "#f22f7033";
+    } else if (element.innerHTML === "Media") {
+      element.style.backgroundColor = "rgba(1, 255, 1, 0.3)";
+      element.style.color = "rgba(1, 148, 1)";
+    } else if (element.innerHTML === "Baja") {
+      element.style.backgroundColor = "rgba(230, 255, 3, 0.3)";
+      element.style.color = "rgb(250, 171, 0)";
+    }
   });
 }
 
@@ -146,12 +151,87 @@ function deployMenuNote() {
   let iconMenuNote = document.querySelectorAll(".tk__note__menu__image");
 
   iconMenuNote.forEach(function (element, position) {
-      element.addEventListener("click", function () {
-          menuNote[position].classList.toggle("deploy__note__menu");
-          containerMenuNote[position].classList.toggle("deploy__container__note__menu");
+    element.addEventListener("click", function () {
+      menuNote[position].classList.toggle("deploy__note__menu");
+      containerMenuNote[position].classList.toggle("deploy__container__note__menu");
 
-      });
+    });
   });
 
-  btnDeleteTask = document.querySelectorAll(".note__btn__delete");
+  let btnDeleteTask = document.querySelectorAll(".note__btn__delete");
+}
+
+/* Estos son los contadores necesarios ---------------- */
+function taskDoneCounter() {
+  if (localStorage.getItem("taskDoneCounter")) {
+    let tasksDone = parseInt(localStorage.getItem("taskDoneCounter"));
+    tasksDone = tasksDone + 1;
+    localStorage.setItem("taskDoneCounter", tasksDone);
+  } else {
+    localStorage.setItem("taskDoneCounter", "1");
+  }
+}
+
+function tasksToDoCounterUp() {
+  if (localStorage.getItem("tasksToDo")) {
+    let tasksToDo = parseInt(localStorage.getItem("tasksToDo"));
+    tasksToDo = tasksToDo + 1;
+    localStorage.setItem("tasksToDo", tasksToDo);
+  } else {
+    localStorage.setItem("tasksToDo", "1");
+  }
+}
+
+function tasksToDoCounterDown() {
+  let tasksToDo = parseInt(localStorage.getItem("tasksToDo"));
+  tasksToDo = tasksToDo - 1;
+  localStorage.setItem("tasksToDo", tasksToDo);
+
+  if (tasksToDo === 0) {
+    localStorage.removeItem("tasksToDo");
+    localStorage.removeItem("tasksToDoToday");
+    localStorage.removeItem("Ideas-Key");
+  }
+}
+
+function tasksToDoTodayCounter() {
+  if (localStorage.getItem("tasksToDoToday")) {
+    let tasksToDoToday = parseInt(localStorage.getItem("tasksToDoToday"));
+    tasksToDoToday = tasksToDoToday + 1;
+    localStorage.setItem("tasksToDoToday", tasksToDoToday);
+  } else {
+    localStorage.setItem("tasksToDoToday", "1");
+  }
+}
+
+function tasksToDoTodayCounterDown() {
+  let tasksToDoToday = parseInt(localStorage.getItem("tasksToDoToday"));
+  tasksToDoToday = tasksToDoToday - 1;
+  localStorage.setItem("tasksToDoToday", tasksToDoToday);
+}
+
+/* Esta funcion el PROGRESO DIARIO del Usuario */
+
+function updateProgressBarToday() {
+  let progressBarh2 = document.querySelector(".ik__progress__bar__porcent");
+  let tasksToDoToday = parseInt(localStorage.getItem("tasksToDoToday"));
+  let tasksToDo = parseInt(localStorage.getItem("tasksToDo"));
+  let porcentByTaks = 100 / tasksToDoToday;
+  let restTasks = tasksToDoToday - tasksToDo;
+
+  if (localStorage.getItem("tasksToDoToday")) {
+    progressBarPorcent = Math.round(restTasks * 100 / tasksToDoToday);
+  } else {
+    progressBarPorcent = 0;
+  }
+
+  progressBarh2.innerHTML = progressBarPorcent + "%";
+  progressBarToday.style.backgroundImage = `conic-gradient(#0089DC, ${restTasks * 100 / tasksToDoToday * 3.6}deg, var(--background-color-container) 0deg)`;
+}
+
+/* Esta funcion elimina tareas pero sin agregar puntos al usuario */
+function beforeDeleteTask(key) {
+  tasksToDoTodayCounterDown();
+  tasksToDoCounterDown();
+  deleteTask(key);
 }

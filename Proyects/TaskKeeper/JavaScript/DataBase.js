@@ -59,8 +59,6 @@ function addNote() {
 
     document.querySelector("#tk__input__title").value = "";
     document.querySelector("#tk__note__area").value = "";
-
-    deployNoteForm();
 }
 
 function showNotes() {
@@ -143,6 +141,14 @@ function updateTask(key) {
     btnUpdatenote.outerHTML = '<input type="button" id="btn__keepnote" value="Guardar" class="ik__btn" onclick="addNoteCloseForm()">';
 
     deployNoteForm();
+}
+
+function deleteTask(key) {
+    const dbTransaction = db.transaction([taskStorageName], "readwrite");
+    const dbStorage = dbTransaction.objectStore(taskStorageName);
+    dbTransaction.addEventListener("complete", beforeShowNotes);
+
+    const request = dbStorage.delete(key);
 }
 
 
