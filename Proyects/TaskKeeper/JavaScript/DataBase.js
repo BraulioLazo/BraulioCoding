@@ -2,6 +2,7 @@ let db;
 let boxNotes;
 let notePriority;
 let lastPrioritySearch = null;
+const taskStorageName = "Task-Keeper";
 
 function generateKey() {
     if (localStorage.getItem("Task-Key")) {
@@ -33,7 +34,7 @@ function start(event) {
 
 function createStorage(event) {
     const dataBase = event.target.result;
-    const storageTask = dataBase.createObjectStore("Task-Keeper", { keyPath: "key" });
+    const storageTask = dataBase.createObjectStore(taskStorageName, { keyPath: "key" });
 
     storageTask.createIndex("LookForPriority", "priority", { unique: false });
 }
@@ -45,8 +46,8 @@ function addNote() {
     const note = document.querySelector("#tk__note__area").value;
     const priority = document.querySelector("#tk__select__priority").value;
 
-    const dbTransaction = db.transaction(["Task-Keeper"], "readwrite");
-    const dbStorage = dbTransaction.objectStore("Task-Keeper");
+    const dbTransaction = db.transaction([taskStorageName], "readwrite");
+    const dbStorage = dbTransaction.objectStore(taskStorageName);
     dbTransaction.addEventListener("complete", beforeShowNotes);
 
     const request = dbStorage.add({
@@ -58,13 +59,15 @@ function addNote() {
 
     document.querySelector("#tk__input__title").value = "";
     document.querySelector("#tk__note__area").value = "";
+
+    deployNoteForm();
 }
 
 function showNotes() {
 
     boxNotes.innerHTML = "";
-    const dbTransaction = db.transaction(["Task-Keeper"]);
-    const dbStorage = dbTransaction.objectStore("Task-Keeper");
+    const dbTransaction = db.transaction([taskStorageName]);
+    const dbStorage = dbTransaction.objectStore(taskStorageName);
     const pointer = dbStorage.openCursor();
     pointer.addEventListener("success", (event) => {
         const pointer = event.target.result;
@@ -96,9 +99,51 @@ function showNotes() {
                 '</div>' +
                 '</div>';
             pointer.continue();
-            deployNoteForm()
+            deployMenuNote();
         }
         priorityColors();
     });
 }
+
+function selectTask(key) {
+    const dbTransaction = db.transaction([taskStorageName], "readwrite");
+    const dbStorage = dbTransaction.objectStore(taskStorageName);
+    const request = dbStorage.get(key);
+
+    request.addEventListener("success", () => {
+        deployNoteForm();
+        document.querySelector("#tk__input__title").value = request.result.notetitle;
+        document.querySelector("#tk__note__area").value = request.result.note;
+    });
+
+    const btnkeepnote = document.querySelector("#btn__keepnote");
+    btnkeepnote.outerHTML = '<input type="button" id="btn__updatenote" value="Actualizar" class="tk__btn" onclick="updateTask(\'' + key + '\')">';
+}
+
+function updateTask(key) {
+    ideasKey = key;
+    const noteTitle = document.querySelector("#tk__input__title").value;
+    const note = document.querySelector("#tk__note__area").value;
+    const priority = document.querySelector("#tk__select__priority").value;
+
+    const dbTransaction = db.transaction([taskStorageName], "readwrite");
+    const dbStorage = dbTransaction.objectStore(taskStorageName);
+    dbTransaction.addEventListener("complete", beforeShowNotes);
+    const request = dbStorage.put({
+        key: ideasKey,
+        notetitle: noteTitle,
+        note: note,
+        priority: priority
+    });
+
+    document.querySelector("#tk__input__title").value = "";
+    document.querySelector("#tk__note__area").value = "";
+
+    const btnUpdatenote = document.querySelector("#btn__updatenote");
+    btnUpdatenote.outerHTML = '<input type="button" id="btn__keepnote" value="Guardar" class="ik__btn" onclick="addNoteCloseForm()">';
+
+    deployNoteForm();
+}
+
+
 

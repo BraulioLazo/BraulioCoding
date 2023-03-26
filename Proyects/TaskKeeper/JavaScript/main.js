@@ -9,7 +9,7 @@ function startTaskKeeper() {
   deployMenu();
   updateUserLevel();
   resetProgram();
-
+  
   const btnNewTask = document.querySelector("#tk__btn__new__note");
   btnNewTask.addEventListener("click", () => {
     deployNoteForm();
@@ -138,4 +138,20 @@ function priorityColors() {
           element.style.color = "rgb(250, 171, 0)";
       }
   });
+}
+
+function deployMenuNote() {
+  let menuNote = document.querySelectorAll(".tk__note__menu__container__button__image");
+  let containerMenuNote = document.querySelectorAll(".tk__note__menu__container");
+  let iconMenuNote = document.querySelectorAll(".tk__note__menu__image");
+
+  iconMenuNote.forEach(function (element, position) {
+      element.addEventListener("click", function () {
+          menuNote[position].classList.toggle("deploy__note__menu");
+          containerMenuNote[position].classList.toggle("deploy__container__note__menu");
+
+      });
+  });
+
+  btnDeleteTask = document.querySelectorAll(".note__btn__delete");
 }
