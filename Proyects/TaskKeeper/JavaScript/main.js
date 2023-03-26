@@ -13,6 +13,9 @@ function startTaskKeeper() {
 
   const btnNewTask = document.querySelector("#tk__btn__new__note");
   btnNewTask.addEventListener("click", () => {
+    document.querySelector(".tk__section_menu").classList.remove("deploy__menu");
+    document.querySelector(".tk__section__user__info").classList.remove("deploy__menu");
+
     deployNoteForm();
   });
 
