@@ -761,7 +761,7 @@ section.deploy__form {
             }
 
             p {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .tk__progress__bar__today__container {
@@ -772,6 +772,12 @@ section.deploy__form {
             .tk__progress__bar__today,
             .tk__progress__bar__next__level {
                 padding: 8px;
+            }
+
+            .tk__progress__bar__next__level {
+                img{
+                    width: 15px;
+                }
             }
 
             .tk__progress__bar__porcent,

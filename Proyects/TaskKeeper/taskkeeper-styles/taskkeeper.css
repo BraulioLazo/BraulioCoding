@@ -715,7 +715,7 @@ section.deploy__form {
     margin-top: -30px;
   }
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today__container {
     width: 160px;
@@ -724,6 +724,9 @@ section.deploy__form {
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__today,
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level {
     padding: 8px;
+  }
+  .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__next__level img {
+    width: 15px;
   }
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent,
   .tk__section__user__info .tk__task__information__container .tk__progress__bars__container .tk__progress__bar__porcent__next__level {
