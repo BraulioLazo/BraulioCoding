@@ -634,7 +634,7 @@ section.deploy__form {
 
 @media screen and (max-width: 768px) {
     body {
-        min-height: 700px;
+        min-height: 850px;
     }
 
     main {
@@ -707,10 +707,8 @@ section.deploy__form {
             }
         }
     }
-}
 
-
-/* Section USER INFO ------------*/
+    /* Section USER INFO ------------*/
 .tk__section__user__info {
     width: 230px;
     align-items: center;
@@ -825,3 +823,7 @@ section.deploy__form {
     }
 
 }
+}
+
+
+
