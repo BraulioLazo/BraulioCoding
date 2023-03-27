@@ -9,6 +9,7 @@ function startTaskKeeper() {
   deployMenu();
   updateUserLevel();
   resetProgram();
+  updateProgressBarToday();
   updatePregressBarLevel();
 
   const btnNewTask = document.querySelector("#tk__btn__new__note");
@@ -237,7 +238,7 @@ function updateProgressBarToday() {
   progressBarh2.innerHTML = progressBarPorcent + "%";
 
   const progressBarToday = document.querySelector(".tk__progress__bar__today");
-  progressBarToday.style.backgroundImage = `conic-gradient(#0089DC, ${restTasks * 100 / tasksToDoToday * 3.6}deg, var(--background-color-container) 0deg)`;
+  progressBarToday.style.backgroundImage = `conic-gradient(#0089DC, ${restTasks * 100 / tasksToDoToday * 3.6}deg, transparent 0deg)`;
 }
 
 /* Esta funcion actualiza el PROGRESO a traves del TIEMPO */
