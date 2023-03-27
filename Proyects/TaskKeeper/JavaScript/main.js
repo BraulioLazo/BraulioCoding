@@ -104,9 +104,11 @@ function updateUserLevel() {
 
 }
 
+/* Esta funcion se encarga de reiniciar el PROGRAMA*/
 function resetProgram() {
   document.querySelector(".tk__tools").addEventListener("click", () => {
     localStorage.clear();
+    deleteIndexedDB();
     location.reload();
   });
 }
@@ -265,10 +267,10 @@ function updatePregressBarLevel() {
     }
 
     nextLevelH2.innerHTML = missingPorcentage + "%";
-    progressBarNextLevel.style.backgroundImage = `conic-gradient(#0089DC, ${missingPorcentage * 3.6}deg, var(--background-color-container) 0deg)`;
+    progressBarNextLevel.style.backgroundImage = `conic-gradient(#0089DC, ${missingPorcentage * 3.6}deg, transparent 0deg)`;
   } else {
     nextLevelH2.innerHTML = 0 + "%";
-    progressBarNextLevel.style.backgroundImage = `conic-gradient(#0089DC, 0deg, var(--background-color-container) 0deg)`;
+    progressBarNextLevel.style.backgroundImage = `conic-gradient(#0089DC, 0deg, transparent 0deg)`;
     nextLevelTextImage.innerHTML = '<img src="images/advanced__crown__image.webp" alt="">' +
       '<p>' + 'Advanced' + '</p>' +
       '<img src="images/advanced__crown__image.webp" alt="">';

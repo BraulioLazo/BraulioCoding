@@ -151,5 +151,19 @@ function deleteTask(key) {
     const request = dbStorage.delete(key);
 }
 
+function deleteIndexedDB() {
+    db.close();
+    const deleteRequest = indexedDB.deleteDatabase("DataBase__Task__keeper");
+
+    deleteRequest.onsuccess = () => {
+        console.log("Base de datos eliminada Exitosamente");
+    };
+
+    deleteRequest.onerror = (event) => {
+        console.error("No se ha podido borrar la Base de Datos: ") + event.target.error;
+    };
+    console.log("Se ejecuta");
+}
+
 
 
