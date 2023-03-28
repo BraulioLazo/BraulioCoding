@@ -18,20 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-main::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -88,12 +75,14 @@ input:focus {
   --tk-color-main: #0089DC;
 }
 
-main .tk__icono__menu__container {
+.tk__icono__menu__container {
   display: none;
 }
 
 .tk__section_menu {
+  display: flex;
   height: 100%;
+  min-height: 850px;
   z-index: 998;
 }
 .tk__section_menu .tk__section_menu__container {
@@ -132,6 +121,10 @@ main .tk__icono__menu__container {
 }
 .tk__section_menu .tk__section_menu__container .tk__ideas__priority__container img {
   width: 25px;
+}
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container #tk__btn__new__note,
+.tk__section_menu .tk__section_menu__container .tk__ideas__priority__container #tk__btn__tasks {
+  outline: none;
 }
 .tk__section_menu .tk__section_menu__container .tk__ideas__priority__container .tk__note__priority {
   display: flex;
@@ -177,28 +170,28 @@ section.deploy__menu {
 }
 
 /* Section Notes ---------------------------------------------------------------*/
-main .tk__section__notes {
+.tk__section__notes {
   display: flex;
   justify-content: center;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
 }
-main .tk__section__notes .tk__section__notes__container {
+.tk__section__notes .tk__section__notes__container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 30px;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container {
   width: 100%;
   margin: 0 auto;
   padding: 30px;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -209,21 +202,21 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__hea
   border-radius: var(--tk-radius-main);
   box-shadow: -10px -10px 20px var(--tk-shadow-ligth), 10px 10px 20px var(--tk-shadow-dark);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 12px;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text h1 {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text h1 {
   width: 100%;
   font-size: 30px;
   font-style: italic;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text p {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__section__notes__container__text p {
   max-width: 550px;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__ideas__keeper__image__container {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__ideas__keeper__image__container {
   width: 150px;
   margin-top: 20px;
   margin-right: 30px;
@@ -232,13 +225,13 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__hea
   box-shadow: var(--tk-shadow-container-outside);
   transform: rotateZ(25deg);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__ideas__keeper__image__container img {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header .tk__ideas__keeper__image__container img {
   width: 100%;
   margin-top: -12px;
   margin-bottom: -4px;
   transform: scale(1.02, 1.02);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -250,7 +243,7 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   padding: 30px;
   overflow: auto;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container {
   position: relative;
   display: flex;
   align-items: baseline;
@@ -262,12 +255,12 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   background-color: var(--tk-background-color-container);
   box-shadow: -10px -10px 20px var(--tk-shadow-ligth), 10px 10px 20px var(--tk-shadow-dark);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container {
   position: absolute;
   top: 0px;
   right: 0px;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__image {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__image {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -275,10 +268,10 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   z-index: 1;
   cursor: pointer;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__image img {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__image img {
   width: 100%;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -294,7 +287,7 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   background-color: var(--tk-background-color-container);
   overflow: hidden;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image button {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image button {
   width: 100%;
   border: none;
   text-align: left;
@@ -303,17 +296,17 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   cursor: pointer;
   transition: transform 0.4s ease;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image button:hover {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .tk__note__menu__container__button__image button:hover {
   transform: scale(1.1, 1.1);
   font-weight: 600;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .deploy__note__menu {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__menu__container .deploy__note__menu {
   width: 120px;
   height: 65px;
   padding: 0 12px;
   box-shadow: var(--tk-shadow-outside);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .deploy__container__note__menu {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .deploy__container__note__menu {
   left: 0px;
   bottom: 0px;
   width: 100%;
@@ -321,24 +314,24 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   border-radius: var(--tk-radius-main);
   backdrop-filter: blur(8px);
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__container__title {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__container__title {
   width: 100%;
   font-style: italic;
   font-weight: 700;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__p__priority {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__p__priority {
   padding: 6px 20px;
   border-radius: var(--tk-radius-circular);
   background-color: rgb(250, 171, 0);
   font-style: italic;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done {
   border: none;
   outline: none;
   padding: 8px 20px;
@@ -349,12 +342,12 @@ main .tk__section__notes .tk__section__notes__container .tk__section__notes__con
   cursor: pointer;
   transition: box-shadow 0.5s ease;
 }
-main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done:hover {
+.tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container .tk__note__pririty__done__container .tk__work__done:hover {
   box-shadow: var(--tk-shadow-outside);
 }
 
 /* Section USER INFO -----------------------------------------------------------*/
-main .tk__icono__user__info__container {
+.tk__icono__user__info__container {
   display: none;
 }
 
@@ -364,6 +357,7 @@ main .tk__icono__user__info__container {
   flex-wrap: wrap;
   width: 250px;
   height: 100%;
+  min-height: 850px;
   padding: 20px;
   background-color: var(--tk-background-color-container);
   box-shadow: -10px 0px 20px var(--tk-shadow-dark);
@@ -488,7 +482,7 @@ main .tk__icono__user__info__container {
   width: 20px;
 }
 
-main section .tk__line__between {
+section .tk__line__between {
   width: 100%;
   height: 4px;
   margin: 20px 0;
@@ -587,10 +581,10 @@ section.deploy__form {
 
 /*Media Queries ----------------------------------*/
 @media screen and (max-width: 1150px) {
-  main .tk__section__notes {
+  .tk__section__notes {
     width: 100%;
   }
-  main .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
+  .tk__section__notes .tk__section__notes__container .tk__section__notes__header__container .tk__section__notes__header {
     display: none;
   }
   .tk__section__user__info {
@@ -600,7 +594,7 @@ section.deploy__form {
     transform: translateX(100%);
     transition: transform 0.5s ease;
   }
-  main .tk__icono__user__info__container {
+  .tk__icono__user__info__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -617,16 +611,16 @@ section.deploy__form {
     background-color: var(--tk-background-color-container);
     z-index: 999;
   }
-  main .tk__icono__user__info__container img {
+  .tk__icono__user__info__container img {
     width: 40px;
     margin-top: -20px;
   }
 }
 @media screen and (max-width: 768px) {
   body {
-    min-height: 850px;
+    min-height: fit-content;
   }
-  main .tk__icono__menu__container {
+  .tk__icono__menu__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -643,14 +637,14 @@ section.deploy__form {
     background-color: var(--tk-background-color-container);
     z-index: 999;
   }
-  main .tk__icono__menu__container img {
+  .tk__icono__menu__container img {
     width: 90%;
   }
   .tk__btn {
     font-size: 18px;
   }
   .tk__section_menu {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     transform: translateX(-100%);
@@ -666,7 +660,7 @@ section.deploy__form {
     font-size: 16px;
   }
   /* Section NOTES ----------------*/
-  main .tk__section__notes {
+  .tk__section__notes {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -674,7 +668,7 @@ section.deploy__form {
     width: 100%;
     height: 100%;
   }
-  main .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container {
+  .tk__section__notes .tk__section__notes__container .tk__section__notes__container__notes .tk__note__container {
     max-width: 800px;
     width: 100%;
   }

@@ -2,6 +2,7 @@ const levelAdvanced = 50;
 const levelPro = 280;
 
 function startTaskKeeper() {
+  window.onresize = () => { fixingContentHeight(); };
   startDataBase();
   deployChangeName();
   generateUserName();
@@ -295,3 +296,52 @@ function beforeDeleteTask(key) {
   tasksToDoCounterDown();
   deleteTask(key);
 }
+
+/* Esta funcion RECUERDA la prioridad elegida anteriormente
+   al haber eliminado una tarea
+*/
+
+function ifPriority(element) {
+  let search;
+  if (element === notePriority[0]) {
+    search = "Alta";
+  } else if (element === notePriority[1]) {
+    search = "Media";
+  } else if (element === notePriority[2]) {
+    search = "Baja";
+  }
+  searchPriority(search);
+  lastPrioritySearch = search;
+}
+
+function fixingContentHeight() {
+  const sectionNotes = document.querySelector(".tk__section__notes");
+
+  const sectionNotesContainer = document.querySelector(".tk__section__notes__container");
+  let sectionNotesHeight = sectionNotesContainer.getBoundingClientRect().height;
+  console.log(sectionNotesHeight);
+
+  console.log(sectionNotesHeight);
+  if (sectionNotesHeight >= 845) {
+    const tkBody = document.querySelector("#tk__body");
+    tkBody.style.minHeight = `${sectionNotesHeight}px`;
+
+    sectionNotes.style.minHeight = `${sectionNotesHeight}px`;
+
+
+    const sectionMenu = document.querySelector("#tk__section_menu");
+    sectionMenu.style.minHeight = `${sectionNotesHeight}px`;
+
+    const sectionUserInfo = document.querySelector(".tk__section__user__info");
+    sectionUserInfo.style.minHeight = `${sectionNotesHeight}px`;
+
+    if (window.innerWidth <= 768) {
+      sectionMenu.style.minHeight = `${100}vh`;
+      sectionUserInfo.style.maxHeight = `${100}vh`;
+      sectionUserInfo.style.minHeight = `${100}vh`;
+
+
+    }
+  }
+}
+
