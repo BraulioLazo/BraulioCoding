@@ -716,9 +716,13 @@ section.deploy__form {
 
     /* Section USER INFO ------------*/
     .tk__section__user__info {
+        position: fixed;
+        top: 0px;
+        right: 0px;
         width: 230px;
         align-items: center;
         align-content: center;
+        
 
         .tk__user__container {
 
